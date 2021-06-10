@@ -1,5 +1,7 @@
 (cl:in-package ped-srv)
-(cl:export '(NAME-VAL
+(cl:export '(AZIONE-VAL
+          AZIONE
+          NAME-VAL
           NAME
           X-VAL
           X

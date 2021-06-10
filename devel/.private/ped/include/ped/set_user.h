@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::ped::set_user > {
   static const char* value()
   {
-    return "f767d19539c13d1e285b77b3522bdee4";
+    return "22d2aef14551e2abcdbc9a7b477b5fa6";
   }
 
   static const char* value(const ::ped::set_user&) { return value(); }

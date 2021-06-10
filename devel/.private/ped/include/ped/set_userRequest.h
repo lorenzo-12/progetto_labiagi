@@ -24,18 +24,23 @@ struct set_userRequest_
   typedef set_userRequest_<ContainerAllocator> Type;
 
   set_userRequest_()
-    : name()
+    : azione()
+    , name()
     , x(0.0)
     , y(0.0)  {
     }
   set_userRequest_(const ContainerAllocator& _alloc)
-    : name(_alloc)
+    : azione(_alloc)
+    , name(_alloc)
     , x(0.0)
     , y(0.0)  {
   (void)_alloc;
     }
 
 
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _azione_type;
+  _azione_type azione;
 
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _name_type;
   _name_type name;
@@ -75,7 +80,8 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::ped::set_userRequest_<ContainerAllocator1> & lhs, const ::ped::set_userRequest_<ContainerAllocator2> & rhs)
 {
-  return lhs.name == rhs.name &&
+  return lhs.azione == rhs.azione &&
+    lhs.name == rhs.name &&
     lhs.x == rhs.x &&
     lhs.y == rhs.y;
 }
@@ -134,12 +140,12 @@ struct MD5Sum< ::ped::set_userRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "3d2ed4b4144493ed8a80311b20e21d00";
+    return "b93ed8e36ebd42da6a2eca7ccdcd5b60";
   }
 
   static const char* value(const ::ped::set_userRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x3d2ed4b4144493edULL;
-  static const uint64_t static_value2 = 0x8a80311b20e21d00ULL;
+  static const uint64_t static_value1 = 0xb93ed8e36ebd42daULL;
+  static const uint64_t static_value2 = 0x6a2eca7ccdcd5b60ULL;
 };
 
 template<class ContainerAllocator>
@@ -158,7 +164,8 @@ struct Definition< ::ped::set_userRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string name\n"
+    return "string azione\n"
+"string name\n"
 "float32 x\n"
 "float32 y\n"
 ;
@@ -179,6 +186,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.azione);
       stream.next(m.name);
       stream.next(m.x);
       stream.next(m.y);
@@ -200,6 +208,8 @@ struct Printer< ::ped::set_userRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::ped::set_userRequest_<ContainerAllocator>& v)
   {
+    s << indent << "azione: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.azione);
     s << indent << "name: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.name);
     s << indent << "x: ";

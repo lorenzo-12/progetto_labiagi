@@ -1,39 +1,41 @@
-#include <sstream> 
-#include <ros/ros.h>
-#include <ped/User.h>
-#include <ped/set_user.h>
-#include "std_msgs/String.h"
 #include <list>
-#include <string>
-#include <iostream>
-#include <stdio.h>
+#include "utils.h"
 using namespace std;
 
-#define red     "\x1b[31m"
-#define green   "\x1b[32m"
-#define yellow  "\x1b[33m"
-#define blue    "\x1b[34m"
-#define purple "\x1b[35m"
-#define lightblue    "\x1b[36m"
-#define fine   "\x1b[0m"
 
-
-class utente{
-    public:
-        string name;
-        float x;
-        float y;
-        utente(string s,float a, float b){name=s;x=a;y=b;};
-        void print(){
-            cout << purple;
-            cout << "name: " << name << endl << "    x: " << x << endl << "    y: " << y << endl << endl; 
-        }
-};
 list<utente> list_user;
 
 bool user_f(ped::set_user::Request& req,
             ped::set_user::Response& res){
-    
+	
+	if(req.azione=="rimuovi"){
+		cout << purple;
+		cout << "RIMUOVO" << endl;
+		cout << fine;
+		utente k = utente(req.name,req.x,req.y);
+		cout << list_user.size();
+		list_user.remove(k);
+		return true;
+	}
+	
+	if(req.azione=="print"){
+		cout << purple;
+		cout << "PRINT" << endl;
+		cout << fine;
+		for(auto k : list_user){
+			cout << k.name << " " << k.x << " " << k.y << endl;
+		}
+		return true;
+	}
+
+	if(req.azione=="delete"){
+		cout << purple;
+		cout << "CANCELLO TUTTO" << endl;
+		cout << fine;
+		list_user.clear();
+		return true;
+	}
+	
     int trovato=0;
     for(auto tmp : list_user){
         if(tmp.name==req.name){

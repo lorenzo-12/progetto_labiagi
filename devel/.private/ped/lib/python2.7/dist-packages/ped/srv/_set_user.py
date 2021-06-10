@@ -8,15 +8,16 @@ import struct
 
 
 class set_userRequest(genpy.Message):
-  _md5sum = "3d2ed4b4144493ed8a80311b20e21d00"
+  _md5sum = "b93ed8e36ebd42da6a2eca7ccdcd5b60"
   _type = "ped/set_userRequest"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """string name
+  _full_text = """string azione
+string name
 float32 x
 float32 y
 """
-  __slots__ = ['name','x','y']
-  _slot_types = ['string','float32','float32']
+  __slots__ = ['azione','name','x','y']
+  _slot_types = ['string','string','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +27,7 @@ float32 y
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       name,x,y
+       azione,name,x,y
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -35,6 +36,8 @@ float32 y
     if args or kwds:
       super(set_userRequest, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
+      if self.azione is None:
+        self.azione = ''
       if self.name is None:
         self.name = ''
       if self.x is None:
@@ -42,6 +45,7 @@ float32 y
       if self.y is None:
         self.y = 0.
     else:
+      self.azione = ''
       self.name = ''
       self.x = 0.
       self.y = 0.
@@ -58,6 +62,12 @@ float32 y
     :param buff: buffer, ``StringIO``
     """
     try:
+      _x = self.azione
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self.name
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -83,6 +93,15 @@ float32 y
       start = end
       end += length
       if python3:
+        self.azione = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.azione = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
         self.name = str[start:end].decode('utf-8', 'rosmsg')
       else:
         self.name = str[start:end]
@@ -102,6 +121,12 @@ float32 y
     :param numpy: numpy python module
     """
     try:
+      _x = self.azione
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self.name
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -122,6 +147,15 @@ float32 y
     codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.azione = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.azione = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -277,6 +311,6 @@ def _get_struct_I():
     return _struct_I
 class set_user(object):
   _type          = 'ped/set_user'
-  _md5sum = 'f767d19539c13d1e285b77b3522bdee4'
+  _md5sum = '22d2aef14551e2abcdbc9a7b477b5fa6'
   _request_class  = set_userRequest
   _response_class = set_userResponse

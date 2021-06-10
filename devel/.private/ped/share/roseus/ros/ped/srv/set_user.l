@@ -20,20 +20,25 @@
 
 (defclass ped::set_userRequest
   :super ros::object
-  :slots (_name _x _y ))
+  :slots (_azione _name _x _y ))
 
 (defmethod ped::set_userRequest
   (:init
    (&key
+    ((:azione __azione) "")
     ((:name __name) "")
     ((:x __x) 0.0)
     ((:y __y) 0.0)
     )
    (send-super :init)
+   (setq _azione (string __azione))
    (setq _name (string __name))
    (setq _x (float __x))
    (setq _y (float __y))
    self)
+  (:azione
+   (&optional __azione)
+   (if __azione (setq _azione __azione)) _azione)
   (:name
    (&optional __name)
    (if __name (setq _name __name)) _name)
@@ -46,6 +51,8 @@
   (:serialization-length
    ()
    (+
+    ;; string _azione
+    4 (length _azione)
     ;; string _name
     4 (length _name)
     ;; float32 _x
@@ -57,6 +64,8 @@
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
+     ;; string _azione
+       (write-long (length _azione) s) (princ _azione s)
      ;; string _name
        (write-long (length _name) s) (princ _name s)
      ;; float32 _x
@@ -67,6 +76,8 @@
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
+   ;; string _azione
+     (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _azione (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
    ;; string _name
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _name (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
    ;; float32 _x
@@ -118,7 +129,7 @@
   :super ros::object
   :slots ())
 
-(setf (get ped::set_user :md5sum-) "f767d19539c13d1e285b77b3522bdee4")
+(setf (get ped::set_user :md5sum-) "22d2aef14551e2abcdbc9a7b477b5fa6")
 (setf (get ped::set_user :datatype-) "ped/set_user")
 (setf (get ped::set_user :request) ped::set_userRequest)
 (setf (get ped::set_user :response) ped::set_userResponse)
@@ -126,10 +137,11 @@
 (defmethod ped::set_userRequest
   (:response () (instance ped::set_userResponse :init)))
 
-(setf (get ped::set_userRequest :md5sum-) "f767d19539c13d1e285b77b3522bdee4")
+(setf (get ped::set_userRequest :md5sum-) "22d2aef14551e2abcdbc9a7b477b5fa6")
 (setf (get ped::set_userRequest :datatype-) "ped/set_userRequest")
 (setf (get ped::set_userRequest :definition-)
-      "string name
+      "string azione
+string name
 float32 x
 float32 y
 ---
@@ -137,10 +149,11 @@ string ret
 
 ")
 
-(setf (get ped::set_userResponse :md5sum-) "f767d19539c13d1e285b77b3522bdee4")
+(setf (get ped::set_userResponse :md5sum-) "22d2aef14551e2abcdbc9a7b477b5fa6")
 (setf (get ped::set_userResponse :datatype-) "ped/set_userResponse")
 (setf (get ped::set_userResponse :definition-)
-      "string name
+      "string azione
+string name
 float32 x
 float32 y
 ---
@@ -150,6 +163,6 @@ string ret
 
 
 
-(provide :ped/set_user "f767d19539c13d1e285b77b3522bdee4")
+(provide :ped/set_user "22d2aef14551e2abcdbc9a7b477b5fa6")
 
 

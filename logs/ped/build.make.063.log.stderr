@@ -1,0 +1,8 @@
+In file included from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:2:0[m[K:
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:[m[K In member function ‘[01m[Kbool utente::operator==(const utente&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:28:29:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kname[m[K’ in ‘[01m[K(utente*)this[m[K’, which is of pointer type ‘[01m[Kutente*[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+             if(a.name==this.[01;31m[Kname[m[K) return true;
+                             [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2

@@ -21,11 +21,18 @@ class set_userRequest {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
+      this.azione = null;
       this.name = null;
       this.x = null;
       this.y = null;
     }
     else {
+      if (initObj.hasOwnProperty('azione')) {
+        this.azione = initObj.azione
+      }
+      else {
+        this.azione = '';
+      }
       if (initObj.hasOwnProperty('name')) {
         this.name = initObj.name
       }
@@ -49,6 +56,8 @@ class set_userRequest {
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type set_userRequest
+    // Serialize message field [azione]
+    bufferOffset = _serializer.string(obj.azione, buffer, bufferOffset);
     // Serialize message field [name]
     bufferOffset = _serializer.string(obj.name, buffer, bufferOffset);
     // Serialize message field [x]
@@ -62,6 +71,8 @@ class set_userRequest {
     //deserializes a message object of type set_userRequest
     let len;
     let data = new set_userRequest(null);
+    // Deserialize message field [azione]
+    data.azione = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [name]
     data.name = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [x]
@@ -73,8 +84,9 @@ class set_userRequest {
 
   static getMessageSize(object) {
     let length = 0;
+    length += object.azione.length;
     length += object.name.length;
-    return length + 12;
+    return length + 16;
   }
 
   static datatype() {
@@ -84,12 +96,13 @@ class set_userRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '3d2ed4b4144493ed8a80311b20e21d00';
+    return 'b93ed8e36ebd42da6a2eca7ccdcd5b60';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
+    string azione
     string name
     float32 x
     float32 y
@@ -103,6 +116,13 @@ class set_userRequest {
       msg = {};
     }
     const resolved = new set_userRequest(null);
+    if (msg.azione !== undefined) {
+      resolved.azione = msg.azione;
+    }
+    else {
+      resolved.azione = ''
+    }
+
     if (msg.name !== undefined) {
       resolved.name = msg.name;
     }
@@ -205,6 +225,6 @@ class set_userResponse {
 module.exports = {
   Request: set_userRequest,
   Response: set_userResponse,
-  md5sum() { return 'f767d19539c13d1e285b77b3522bdee4'; },
+  md5sum() { return '22d2aef14551e2abcdbc9a7b477b5fa6'; },
   datatype() { return 'ped/set_user'; }
 };
