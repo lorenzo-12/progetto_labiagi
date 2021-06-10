@@ -1,0 +1,8 @@
+prefix=/home/me/progetto_labiagi/devel/.private/ped
+
+Name: ped
+Description: Description of ped
+Version: 0.0.0
+Cflags: -I/home/me/progetto_labiagi/devel/.private/ped/include -I/home/me/progetto_labiagi/src/ped/include
+Libs: -L${prefix}/lib -lped
+Requires: message_generation roscpp std_msgs

@@ -1,0 +1,26 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:26:15:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kprint[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+         print([01;31m[K)[m[K{
+               [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In constructor ‘[01m[Kutente::utente(std::__cxx11::string, float, float)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:25:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+         utente(string s,float a, float b){name=s;x=a;y=b[01;31m[K}[m[K;
+                                                         [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K At global scope:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:34:25:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kservizio_user[m[K’ declared void
+ void servizio_user(ped::[01;31m[Kset_user[m[K::Request& req
+                         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:34:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kped::set_user[m[K’ has not been declared
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:34:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kreq[m[K’ was not declared in this scope
+ void servizio_user(ped::set_user::Request& [01;31m[Kreq[m[K
+                                            [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:34:44:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kred[m[K’
+ void servizio_user(ped::set_user::Request& [01;36m[Kreq[m[K
+                                            [01;36m[K^~~[m[K
+                                            [32m[Kred[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:63:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kservizio_user[m[K’ was not declared in this scope
+     ros::ServiceServer service = n.advertiseService("nome_topic", [01;31m[Kservizio_user[m[K);
+                                                                   [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2
