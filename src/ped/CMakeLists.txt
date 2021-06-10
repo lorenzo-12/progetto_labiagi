@@ -9,6 +9,7 @@ project(ped)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   message_generation
+  geometry_msgs
   message_runtime
   roscpp
   std_msgs
@@ -91,3 +92,7 @@ include_directories(
 add_executable(ped_server src/ped_server.cpp)
 target_link_libraries(ped_server ${catkin_LIBRARIES})
 add_dependencies(ped_server ${ped_EXPORTED_TARGETS})
+
+add_executable(ped_client src/ped_client.cpp)
+target_link_libraries(ped_client ${catkin_LIBRARIES})
+add_dependencies(ped_client ${ped_EXPORTED_TARGETS})

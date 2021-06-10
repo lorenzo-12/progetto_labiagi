@@ -101,6 +101,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,17 +168,160 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
+# Target rules for targets named ped_client
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
+ped_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_client
+.PHONY : ped_client
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
+ped_client/fast:
+	$(MAKE) -f CMakeFiles/ped_client.dir/build.make CMakeFiles/ped_client.dir/build
+.PHONY : ped_client/fast
+
+#=============================================================================
+# Target rules for targets named ped_server
+
+# Build rule for target.
+ped_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_server
+.PHONY : ped_server
+
+# fast build rule for target.
+ped_server/fast:
+	$(MAKE) -f CMakeFiles/ped_server.dir/build.make CMakeFiles/ped_server.dir/build
+.PHONY : ped_server/fast
+
+#=============================================================================
+# Target rules for targets named ped_generate_messages_py
+
+# Build rule for target.
+ped_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_generate_messages_py
+.PHONY : ped_generate_messages_py
+
+# fast build rule for target.
+ped_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/ped_generate_messages_py.dir/build.make CMakeFiles/ped_generate_messages_py.dir/build
+.PHONY : ped_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named download_extra_data
+
+# Build rule for target.
+download_extra_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
+.PHONY : download_extra_data
+
+# fast build rule for target.
+download_extra_data/fast:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_eus
@@ -194,17 +337,173 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named ped_geneus
+# Target rules for targets named rosgraph_msgs_generate_messages_py
 
 # Build rule for target.
-ped_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_geneus
-.PHONY : ped_geneus
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
 
 # fast build rule for target.
-ped_geneus/fast:
-	$(MAKE) -f CMakeFiles/ped_geneus.dir/build.make CMakeFiles/ped_geneus.dir/build
-.PHONY : ped_geneus/fast
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named ped_genpy
+
+# Build rule for target.
+ped_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_genpy
+.PHONY : ped_genpy
+
+# fast build rule for target.
+ped_genpy/fast:
+	$(MAKE) -f CMakeFiles/ped_genpy.dir/build.make CMakeFiles/ped_genpy.dir/build
+.PHONY : ped_genpy/fast
+
+#=============================================================================
+# Target rules for targets named ped_generate_messages_lisp
+
+# Build rule for target.
+ped_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_generate_messages_lisp
+.PHONY : ped_generate_messages_lisp
+
+# fast build rule for target.
+ped_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/ped_generate_messages_lisp.dir/build.make CMakeFiles/ped_generate_messages_lisp.dir/build
+.PHONY : ped_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _catkin_empty_exported_target
+
+# Build rule for target.
+_catkin_empty_exported_target: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
+.PHONY : _catkin_empty_exported_target
+
+# fast build rule for target.
+_catkin_empty_exported_target/fast:
+	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named ped_generate_messages
+
+# Build rule for target.
+ped_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_generate_messages
+.PHONY : ped_generate_messages
+
+# fast build rule for target.
+ped_generate_messages/fast:
+	$(MAKE) -f CMakeFiles/ped_generate_messages.dir/build.make CMakeFiles/ped_generate_messages.dir/build
+.PHONY : ped_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named ped_gennodejs
+
+# Build rule for target.
+ped_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_gennodejs
+.PHONY : ped_gennodejs
+
+# fast build rule for target.
+ped_gennodejs/fast:
+	$(MAKE) -f CMakeFiles/ped_gennodejs.dir/build.make CMakeFiles/ped_gennodejs.dir/build
+.PHONY : ped_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named doxygen
+
+# Build rule for target.
+doxygen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doxygen
+.PHONY : doxygen
+
+# fast build rule for target.
+doxygen/fast:
+	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_eus
+
+# Build rule for target.
+roscpp_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_eus
@@ -246,212 +545,56 @@ ped_gencpp/fast:
 .PHONY : ped_gencpp/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+# Target rules for targets named geometry_msgs_generate_messages_py
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named _catkin_empty_exported_target
+# Target rules for targets named ped_geneus
 
 # Build rule for target.
-_catkin_empty_exported_target: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
-.PHONY : _catkin_empty_exported_target
+ped_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_geneus
+.PHONY : ped_geneus
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+ped_geneus/fast:
+	$(MAKE) -f CMakeFiles/ped_geneus.dir/build.make CMakeFiles/ped_geneus.dir/build
+.PHONY : ped_geneus/fast
 
 #=============================================================================
-# Target rules for targets named ped_generate_messages
+# Target rules for targets named ped_genlisp
 
 # Build rule for target.
-ped_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_generate_messages
-.PHONY : ped_generate_messages
+ped_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_genlisp
+.PHONY : ped_genlisp
 
 # fast build rule for target.
-ped_generate_messages/fast:
-	$(MAKE) -f CMakeFiles/ped_generate_messages.dir/build.make CMakeFiles/ped_generate_messages.dir/build
-.PHONY : ped_generate_messages/fast
+ped_genlisp/fast:
+	$(MAKE) -f CMakeFiles/ped_genlisp.dir/build.make CMakeFiles/ped_genlisp.dir/build
+.PHONY : ped_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
+# Target rules for targets named ped_generate_messages_nodejs
 
 # Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
+ped_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_generate_messages_nodejs
+.PHONY : ped_generate_messages_nodejs
 
 # fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
-
-# Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_nodejs
-
-# Build rule for target.
-roscpp_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_eus
-
-# Build rule for target.
-roscpp_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	$(MAKE) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
-
-# Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named tests
-
-# Build rule for target.
-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests
-.PHONY : tests
-
-# fast build rule for target.
-tests/fast:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-.PHONY : tests/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named download_extra_data
-
-# Build rule for target.
-download_extra_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
-.PHONY : download_extra_data
-
-# fast build rule for target.
-download_extra_data/fast:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-.PHONY : download_extra_data/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
-
-# Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named ped_gennodejs
-
-# Build rule for target.
-ped_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_gennodejs
-.PHONY : ped_gennodejs
-
-# fast build rule for target.
-ped_gennodejs/fast:
-	$(MAKE) -f CMakeFiles/ped_gennodejs.dir/build.make CMakeFiles/ped_gennodejs.dir/build
-.PHONY : ped_gennodejs/fast
-
-#=============================================================================
-# Target rules for targets named doxygen
-
-# Build rule for target.
-doxygen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 doxygen
-.PHONY : doxygen
-
-# fast build rule for target.
-doxygen/fast:
-	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-.PHONY : doxygen/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
-
-# Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
+ped_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/ped_generate_messages_nodejs.dir/build.make CMakeFiles/ped_generate_messages_nodejs.dir/build
+.PHONY : ped_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
@@ -478,6 +621,19 @@ _ped_generate_messages_check_deps_User: cmake_check_build_system
 _ped_generate_messages_check_deps_User/fast:
 	$(MAKE) -f CMakeFiles/_ped_generate_messages_check_deps_User.dir/build.make CMakeFiles/_ped_generate_messages_check_deps_User.dir/build
 .PHONY : _ped_generate_messages_check_deps_User/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named clean_test_results
@@ -545,84 +701,6 @@ ped_generate_messages_eus/fast:
 .PHONY : ped_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named ped_generate_messages_nodejs
-
-# Build rule for target.
-ped_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_generate_messages_nodejs
-.PHONY : ped_generate_messages_nodejs
-
-# fast build rule for target.
-ped_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/ped_generate_messages_nodejs.dir/build.make CMakeFiles/ped_generate_messages_nodejs.dir/build
-.PHONY : ped_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named ped_genlisp
-
-# Build rule for target.
-ped_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_genlisp
-.PHONY : ped_genlisp
-
-# fast build rule for target.
-ped_genlisp/fast:
-	$(MAKE) -f CMakeFiles/ped_genlisp.dir/build.make CMakeFiles/ped_genlisp.dir/build
-.PHONY : ped_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named ped_generate_messages_py
-
-# Build rule for target.
-ped_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_generate_messages_py
-.PHONY : ped_generate_messages_py
-
-# fast build rule for target.
-ped_generate_messages_py/fast:
-	$(MAKE) -f CMakeFiles/ped_generate_messages_py.dir/build.make CMakeFiles/ped_generate_messages_py.dir/build
-.PHONY : ped_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named ped_generate_messages_lisp
-
-# Build rule for target.
-ped_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_generate_messages_lisp
-.PHONY : ped_generate_messages_lisp
-
-# fast build rule for target.
-ped_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/ped_generate_messages_lisp.dir/build.make CMakeFiles/ped_generate_messages_lisp.dir/build
-.PHONY : ped_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named ped_genpy
-
-# Build rule for target.
-ped_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_genpy
-.PHONY : ped_genpy
-
-# fast build rule for target.
-ped_genpy/fast:
-	$(MAKE) -f CMakeFiles/ped_genpy.dir/build.make CMakeFiles/ped_genpy.dir/build
-.PHONY : ped_genpy/fast
-
-#=============================================================================
-# Target rules for targets named ped_server
-
-# Build rule for target.
-ped_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_server
-.PHONY : ped_server
-
-# fast build rule for target.
-ped_server/fast:
-	$(MAKE) -f CMakeFiles/ped_server.dir/build.make CMakeFiles/ped_server.dir/build
-.PHONY : ped_server/fast
-
-#=============================================================================
 # Target rules for targets named gmock_main
 
 # Build rule for target.
@@ -674,6 +752,33 @@ gtest/fast:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+src/ped_client.o: src/ped_client.cpp.o
+
+.PHONY : src/ped_client.o
+
+# target to build an object file
+src/ped_client.cpp.o:
+	$(MAKE) -f CMakeFiles/ped_client.dir/build.make CMakeFiles/ped_client.dir/src/ped_client.cpp.o
+.PHONY : src/ped_client.cpp.o
+
+src/ped_client.i: src/ped_client.cpp.i
+
+.PHONY : src/ped_client.i
+
+# target to preprocess a source file
+src/ped_client.cpp.i:
+	$(MAKE) -f CMakeFiles/ped_client.dir/build.make CMakeFiles/ped_client.dir/src/ped_client.cpp.i
+.PHONY : src/ped_client.cpp.i
+
+src/ped_client.s: src/ped_client.cpp.s
+
+.PHONY : src/ped_client.s
+
+# target to generate assembly for a file
+src/ped_client.cpp.s:
+	$(MAKE) -f CMakeFiles/ped_client.dir/build.make CMakeFiles/ped_client.dir/src/ped_client.cpp.s
+.PHONY : src/ped_client.cpp.s
+
 src/ped_server.o: src/ped_server.cpp.o
 
 .PHONY : src/ped_server.o
@@ -711,48 +816,57 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... ped_geneus"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... ped_gencpp"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... ped_generate_messages"
-	@echo "... roscpp_generate_messages_py"
+	@echo "... test"
+	@echo "... ped_client"
+	@echo "... ped_server"
+	@echo "... ped_generate_messages_py"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_eus"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... tests"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
-	@echo "... tests"
-	@echo "... roscpp_generate_messages_lisp"
 	@echo "... download_extra_data"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... ped_genpy"
+	@echo "... ped_generate_messages_lisp"
+	@echo "... _catkin_empty_exported_target"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... ped_generate_messages"
+	@echo "... roscpp_generate_messages_lisp"
 	@echo "... install/local"
 	@echo "... ped_gennodejs"
 	@echo "... doxygen"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... ped_gencpp"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... ped_geneus"
+	@echo "... ped_genlisp"
+	@echo "... ped_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _ped_generate_messages_check_deps_User"
+	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... clean_test_results"
 	@echo "... _ped_generate_messages_check_deps_set_user"
 	@echo "... run_tests"
 	@echo "... ped_generate_messages_cpp"
 	@echo "... ped_generate_messages_eus"
-	@echo "... ped_generate_messages_nodejs"
-	@echo "... ped_genlisp"
-	@echo "... ped_generate_messages_py"
-	@echo "... ped_generate_messages_lisp"
-	@echo "... ped_genpy"
-	@echo "... ped_server"
-	@echo "... test"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... src/ped_client.o"
+	@echo "... src/ped_client.i"
+	@echo "... src/ped_client.s"
 	@echo "... src/ped_server.o"
 	@echo "... src/ped_server.i"
 	@echo "... src/ped_server.s"

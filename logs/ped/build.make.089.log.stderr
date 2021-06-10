@@ -1,0 +1,30 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:11:32:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  ros::ServiceClient client = n.[01;31m[KserviceClient<geometry_msgs/PoseStamped>[m[K("/move_base_simple/goal");
+                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:11:97:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::serviceClient<<expression error> >(const char [23])[m[K’
+  ros::ServiceClient client = n.serviceClient<geometry_msgs/PoseStamped>("/move_base_simple/goal"[01;31m[K)[m[K;
+                                                                                                 [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1240:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class MReq, class MRes> ros::ServiceClient ros::NodeHandle::serviceClient(const string&, bool, const M_string&)
+   ServiceClient [01;36m[KserviceClient[m[K(const std::string& service_name, bool persistent = false,
+                 [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1240:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:11:97:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  ros::ServiceClient client = n.serviceClient<geometry_msgs/PoseStamped>("/move_base_simple/goal"[01;31m[K)[m[K;
+                                                                                                 [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1260:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class Service> ros::ServiceClient ros::NodeHandle::serviceClient(const string&, bool, const M_string&)
+   ServiceClient [01;36m[KserviceClient[m[K(const std::string& service_name, bool persistent = false,
+                 [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1260:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:11:97:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  ros::ServiceClient client = n.serviceClient<geometry_msgs/PoseStamped>("/move_base_simple/goal"[01;31m[K)[m[K;
+                                                                                                 [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

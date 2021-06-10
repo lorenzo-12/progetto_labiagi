@@ -1,0 +1,26 @@
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target _ped_generate_messages_check_deps_User
+[  0%] Built target _ped_generate_messages_check_deps_set_user
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[ 17%] Built target ped_generate_messages_eus
+[ 17%] Built target std_msgs_generate_messages_cpp
+[ 41%] Built target ped_generate_messages_py
+[ 52%] Built target ped_generate_messages_nodejs
+[ 64%] Built target ped_generate_messages_cpp
+[ 76%] Built target ped_generate_messages_lisp
+[35m[1mScanning dependencies of target ped_client[0m
+[ 76%] Built target ped_generate_messages
+[ 82%] [32mBuilding CXX object CMakeFiles/ped_client.dir/src/ped_client.cpp.o[0m
+[ 94%] Built target ped_server
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:17:34:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kros::Time[m[K’ to ‘[01m[Kuint32_t {aka unsigned int}[m[K’ in assignment
+  goal.header.stamp.sec=ros::Time([01;31m[K)[m[K;
+                                  [01;31m[K^[m[K
+CMakeFiles/ped_client.dir/build.make:62: recipe for target 'CMakeFiles/ped_client.dir/src/ped_client.cpp.o' failed
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+CMakeFiles/Makefile2:71: recipe for target 'CMakeFiles/ped_client.dir/all' failed
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2
