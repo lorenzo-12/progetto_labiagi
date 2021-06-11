@@ -4,6 +4,7 @@
 #include <ped/set_user.h>
 #include "std_msgs/String.h"
 #include <list>
+#include <vector>
 #include <string>
 #include <iostream>
 #include <stdio.h>

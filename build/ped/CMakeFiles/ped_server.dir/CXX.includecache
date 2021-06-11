@@ -81,6 +81,8 @@ std_msgs/String.h
 /home/me/progetto_labiagi/src/ped/src/std_msgs/String.h
 list
 -
+vector
+-
 string
 -
 iostream

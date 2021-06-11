@@ -1,0 +1,10 @@
+In file included from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1:0[m[K:
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:19:16:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before string constant
+ #define fine   [01;31m[K"[m[K\x1b[0m"
+                [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:12:6:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kfine[m[K’
+ bool [01;36m[Kfine[m[K=true;
+      [01;36m[K^~~~[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

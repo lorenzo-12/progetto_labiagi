@@ -1,0 +1,14 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kvoid robot_status(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:14:11:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Ksrrg2_core_ros::PlannerStatusMessage {aka srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >}[m[K’ and ‘[01m[Kconst ConstPtr {aka const boost::shared_ptr<const srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> > >}[m[K’)
+  status = [01;31m[Kstatus_msg[m[K;
+           [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:4:0[m[K:
+[01m[K/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h:23:8:[m[K [01;36m[Knote: [m[Kcandidate: srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >& srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >::operator=(const srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >&)
+ struct [01;36m[KPlannerStatusMessage_[m[K
+        [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h:23:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst ConstPtr {aka const boost::shared_ptr<const srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> > >}[m[K’ to ‘[01m[Kconst srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >&[m[K’
+[01m[K/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h:23:8:[m[K [01;36m[Knote: [m[Kcandidate: srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >& srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >::operator=(srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >&&)
+[01m[K/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h:23:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst ConstPtr {aka const boost::shared_ptr<const srrg2_core_ros::PlannerStatusMessage_<std::allocator<void> > >}[m[K’ to ‘[01m[Ksrrg2_core_ros::PlannerStatusMessage_<std::allocator<void> >&&[m[K’
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

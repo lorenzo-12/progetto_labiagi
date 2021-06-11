@@ -1,0 +1,9 @@
+[31m[1mCMake Error[0m at /home/me/progetto_labiagi/src/ped/CMakeLists.txt:10 (find_package):
+  find_package called with invalid argument "srrg2_labiagi"
+
+
+[31m[1mCMake Error[0m at /home/me/progetto_labiagi/src/ped/CMakeLists.txt:25 (add_message_files):
+  Unknown CMake command "add_message_files".
+
+
+make: *** [cmake_check_build_system] Error 1

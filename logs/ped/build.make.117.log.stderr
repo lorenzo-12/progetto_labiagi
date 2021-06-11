@@ -1,0 +1,39 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kvoid robot_status(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:28:13:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::__cxx11::list<int>::size(int)[m[K’
+  if(l.size(4[01;31m[K)[m[K){
+             [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/7/list:63:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_list.h:966:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::list<_Tp, _Alloc>::size_type std::__cxx11::list<_Tp, _Alloc>::size() const [with _Tp = int; _Alloc = std::allocator<int>; std::__cxx11::list<_Tp, _Alloc>::size_type = long unsigned int]
+       [01;36m[Ksize[m[K() const _GLIBCXX_NOEXCEPT
+       [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_list.h:966:7:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:29:7:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::__cxx11::list<int>[m[K’ and ‘[01m[Kint[m[K’)
+   if(l[01;31m[K[[m[K0]==l[1] and l[1]==l[2] and l[2]==l[3]){
+       [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:29:13:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::__cxx11::list<int>[m[K’ and ‘[01m[Kint[m[K’)
+   if(l[0]==l[01;31m[K[[m[K1] and l[1]==l[2] and l[2]==l[3]){
+             [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:29:22:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::__cxx11::list<int>[m[K’ and ‘[01m[Kint[m[K’)
+   if(l[0]==l[1] and l[01;31m[K[[m[K1]==l[2] and l[2]==l[3]){
+                      [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:29:28:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::__cxx11::list<int>[m[K’ and ‘[01m[Kint[m[K’)
+   if(l[0]==l[1] and l[1]==l[01;31m[K[[m[K2] and l[2]==l[3]){
+                            [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:29:37:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::__cxx11::list<int>[m[K’ and ‘[01m[Kint[m[K’)
+   if(l[0]==l[1] and l[1]==l[2] and l[01;31m[K[[m[K2]==l[3]){
+                                     [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:29:43:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::__cxx11::list<int>[m[K’ and ‘[01m[Kint[m[K’)
+   if(l[0]==l[1] and l[1]==l[2] and l[2]==l[01;31m[K[[m[K3]){
+                                           [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:61:69:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+    ros::topic::waitForMessage<srrg2_core_ros::PlannerStatusMessage>([01;31m[K,[m[Kros::Duration(10));
+                                                                     [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

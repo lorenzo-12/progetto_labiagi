@@ -1,0 +1,13 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kvoid robot_status(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:25:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<int>[m[K’ has no member named ‘[01m[Kpush_front[m[K’; did you mean ‘[01m[Kfront[m[K’?
+   l.[01;31m[Kpush_front[m[K(status->distance_to_local_goal);
+     [01;31m[K^~~~~~~~~~[m[K
+     [32m[Kfront[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:61:69:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+    ros::topic::waitForMessage<srrg2_core_ros::PlannerStatusMessage>([01;31m[K,[m[Kros::Duration(10));
+                                                                     [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

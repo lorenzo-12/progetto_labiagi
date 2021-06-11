@@ -1,0 +1,18 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:4:2:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #inlcude; did you mean #include?
+ #[01;31m[Kinlcude[m[K "srrg2_core_ros/PlannerStatusMessage.h"
+  [01;31m[K^~~~~~~[m[K
+  [32m[Kinclude[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:12:32:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[K<unresolved overloaded function type>[m[K’ to non-scalar type ‘[01m[Kros::Publisher[m[K’ requested
+  ros::Publisher pub_status = [01;31m[Kn.advertise<>[m[K
+                              [01;31m[K~~^~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:24:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_goal[m[K’ was not declared in this scope
+   [01;31m[Kpub_goal[m[K.publish(goal);
+   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:24:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kgoal[m[K’
+   [01;36m[Kpub_goal[m[K.publish(goal);
+   [01;36m[K^~~~~~~~[m[K
+   [32m[Kgoal[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2
