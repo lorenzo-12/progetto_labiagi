@@ -1,0 +1,10 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kvoid robot_status(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:31:51:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K%[m[K’ token
+   cout << "\rdist: " << dist << "  dist_att: " << [01;31m[K%[m[K4.dist_att << "  p: " << p << " " << flush;
+                                                   [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:31:52:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""dist_att[m[K’
+   cout << "\rdist: " << dist << "  dist_att: " << %[01;31m[K4.dist_att[m[K << "  p: " << p << " " << flush;
+                                                    [01;31m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

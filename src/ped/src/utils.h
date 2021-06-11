@@ -1,6 +1,7 @@
 #include <sstream> 
 #include <ros/ros.h>
 #include <ped/User.h>
+#include "std_msgs/String.h"
 #include <ped/set_user.h>
 #include "std_msgs/String.h"
 #include <list>

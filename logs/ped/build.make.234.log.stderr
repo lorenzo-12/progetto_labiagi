@@ -1,0 +1,21 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kvoid robot_status(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:33:7:[m[K [01;31m[Kerror: [m[K‘[01m[KtoString[m[K’ was not declared in this scope
+   s = [01;31m[KtoString[m[K(p);
+       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:33:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Koptind[m[K’
+   s = [01;36m[KtoString[m[K(p);
+       [01;36m[K^~~~~~~~[m[K
+       [32m[Koptind[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:34:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::__cxx11::string {aka class std::__cxx11::basic_string<char>}[m[K’ has no member named ‘[01m[Kstr[m[K’
+   msg.data=s.[01;31m[Kstr[m[K();
+              [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:43:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kss[m[K’ was not declared in this scope
+   [01;31m[Kss[m[K << "test" << endl;
+   [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:43:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ks[m[K’
+   [01;36m[Kss[m[K << "test" << endl;
+   [01;36m[K^~[m[K
+   [32m[Ks[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

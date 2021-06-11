@@ -75,6 +75,8 @@ ros/ros.h
 -
 ped/User.h
 -
+std_msgs/String.h
+/home/me/progetto_labiagi/src/ped/src/std_msgs/String.h
 ped/set_user.h
 -
 std_msgs/String.h
