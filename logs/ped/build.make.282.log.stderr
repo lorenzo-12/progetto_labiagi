@@ -1,0 +1,15 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:8:1:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ does not name a type; did you mean ‘[01m[K__rint[m[K’?
+ [01;31m[KString[m[K pacco;
+ [01;31m[K^~~~~~[m[K
+ [32m[K__rint[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:47:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kpacco[m[K’ was not declared in this scope
+  cout << "digita 'pacco' per inserirlo: "; cin >> [01;31m[Kpacco[m[K;
+                                                   [01;31m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:47:51:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kacct[m[K’
+  cout << "digita 'pacco' per inserirlo: "; cin >> [01;36m[Kpacco[m[K;
+                                                   [01;36m[K^~~~~[m[K
+                                                   [32m[Kacct[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

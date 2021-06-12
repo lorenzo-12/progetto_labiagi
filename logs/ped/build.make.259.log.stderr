@@ -1,0 +1,21 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_test.cpp:[m[K In function ‘[01m[Kvoid stato_robot(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_test.cpp:66:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ks[m[K’ was not declared in this scope
+   [01;31m[Ks[m[K="robot arrivato";
+   [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_test.cpp:88:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+  ros::Subscriber pub_status = [01;31m[Kn[m[K.subscribe("/planner_status", 1000, robot_status);
+                               [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_test.cpp:88:68:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_status[m[K’ was not declared in this scope
+  ros::Subscriber pub_status = n.subscribe("/planner_status", 1000, [01;31m[Krobot_status[m[K);
+                                                                    [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_test.cpp:88:68:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kpub_status[m[K’
+  ros::Subscriber pub_status = n.subscribe("/planner_status", 1000, [01;36m[Krobot_status[m[K);
+                                                                    [01;36m[K^~~~~~~~~~~~[m[K
+                                                                    [32m[Kpub_status[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_test.cpp:90:55:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  ros::Publisher pub_out = n.advertise<std_msgs::String[01;31m[K>[m[K("/stato_robot", 1000);
+                                                       [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ped_test.dir/src/ped_test.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_test.dir/all] Error 2
+make: *** [all] Error 2

@@ -10,6 +10,7 @@ ped
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/msg/__init__.py
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/_set_user.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/srv/_set_user.py
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/__init__.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/srv/__init__.py
+/home/me/progetto_labiagi/devel/.private/ped/lib/ped/ped_test /home/me/progetto_labiagi/devel/lib/ped/ped_test
 /home/me/progetto_labiagi/devel/.private/ped/lib/ped/ped_client /home/me/progetto_labiagi/devel/lib/ped/ped_client
 /home/me/progetto_labiagi/devel/.private/ped/lib/ped/ped_server /home/me/progetto_labiagi/devel/lib/ped/ped_server
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/manifest.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/manifest.l

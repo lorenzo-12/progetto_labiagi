@@ -1,0 +1,69 @@
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kvoid nulla(const ConstPtr&)[m[K’:
+[01m[K/opt/ros/melodic/include/ros/console.h:348:176:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 8 has type ‘[01m[Kconst ConstPtr {aka const boost::shared_ptr<const std_msgs::String_<std::allocator<void> > >}[m[K’ [[01;35m[K-Wformat=[m[K]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__[01;35m[K)[m[K
+                                                                                                                                                                                [01;35m[K^[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:351:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     [01;36m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K(NULL, __VA_ARGS__)
+     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:387:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:572:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:10:2:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  [01;36m[KROS_INFO[m[K("IL ROBOT HA SCRITTO: %s",msg);
+  [01;36m[K^~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:43:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KwaitForMessage(const char [13], ros::Duration)[m[K’
+  ros::topic::waitForMessage("/stato_robot",ros::Duration(20)[01;31m[K)[m[K;
+                                                             [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:55:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/topic.h:86:28:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> boost::shared_ptr<const M> ros::topic::waitForMessage(const string&, ros::NodeHandle&, ros::Duration)
+ boost::shared_ptr<M const> [01;36m[KwaitForMessage[m[K(const std::string& topic, NodeHandle& nh, ros::Duration timeout)
+                            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/topic.h:86:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:43:61:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+  ros::topic::waitForMessage("/stato_robot",ros::Duration(20)[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:55:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/topic.h:105:28:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> boost::shared_ptr<const M> ros::topic::waitForMessage(const string&)
+ boost::shared_ptr<M const> [01;36m[KwaitForMessage[m[K(const std::string& topic)
+                            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/topic.h:105:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:43:61:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+  ros::topic::waitForMessage("/stato_robot",ros::Duration(20)[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:55:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/topic.h:120:28:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> boost::shared_ptr<const M> ros::topic::waitForMessage(const string&, ros::Duration)
+ boost::shared_ptr<M const> [01;36m[KwaitForMessage[m[K(const std::string& topic, ros::Duration timeout)
+                            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/topic.h:120:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:43:61:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[KM[m[K’
+  ros::topic::waitForMessage("/stato_robot",ros::Duration(20)[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:55:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/topic.h:135:28:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> boost::shared_ptr<const M> ros::topic::waitForMessage(const string&, ros::NodeHandle&)
+ boost::shared_ptr<M const> [01;36m[KwaitForMessage[m[K(const std::string& topic, ros::NodeHandle& nh)
+                            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/topic.h:135:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:43:61:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[KM[m[K’
+  ros::topic::waitForMessage("/stato_robot",ros::Duration(20)[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2
