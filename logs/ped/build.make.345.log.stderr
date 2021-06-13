@@ -1,0 +1,618 @@
+In file included from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1:0[m[K:
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:15:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+ [01;31m[K38[m[K;5;129
+ [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:15:4:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+ 38;[01;31m[K5[m[K;129
+    [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:15:6:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+ 38;5;[01;31m[K129[m[K
+      [01;31m[K^~~[m[K
+In file included from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1:0[m[K:
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:15:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+ [01;31m[K38[m[K;5;129
+ [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:15:4:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+ 38;[01;31m[K5[m[K;129
+    [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:15:6:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+ 38;5;[01;31m[K129[m[K
+      [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:10:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kutente[m[K’ was not declared in this scope
+ list<[01;31m[Kutente[m[K> list_user;
+      [01;31m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:10:6:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kputenv[m[K’
+ list<[01;36m[Kutente[m[K> list_user;
+      [01;36m[K^~~~~~[m[K
+      [32m[Kputenv[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:10:12:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+ list<utente[01;31m[K>[m[K list_user;
+            [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:10:12:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:62:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kbegin[m[K’ was not declared in this scope
+    for(auto& k : [01;31m[Klist_user[m[K){
+                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:62:18:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kbegin[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:22:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::begin[m[K’
+ template< typename Sequence > struct [01;36m[Kbegin[m[K;
+                                      [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:62:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kend[m[K’ was not declared in this scope
+    for(auto& k : [01;31m[Klist_user[m[K){
+                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:62:18:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kend[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:23:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::end[m[K’
+ template< typename Sequence > struct [01;36m[Kend[m[K;
+                                      [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:75:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kutente[m[K’ was not declared in this scope
+     [01;31m[Kutente[m[K tmp = utente(username,pos_x,pos_y);
+     [01;31m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:75:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kputenv[m[K’
+     [01;36m[Kutente[m[K tmp = utente(username,pos_x,pos_y);
+     [01;36m[K^~~~~~[m[K
+     [32m[Kputenv[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:76:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kpush_back[m[K’ in ‘[01m[Klist_user[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     list_user.[01;31m[Kpush_back[m[K(tmp);
+               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:76:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktmp[m[K’ was not declared in this scope
+     list_user.push_back([01;31m[Ktmp[m[K);
+                         [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:76:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktm[m[K’
+     list_user.push_back([01;36m[Ktmp[m[K);
+                         [01;36m[K^~~[m[K
+                         [32m[Ktm[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:86:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kbegin[m[K’ was not declared in this scope
+    for(auto k : [01;31m[Klist_user[m[K){
+                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:86:17:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kbegin[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:22:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::begin[m[K’
+ template< typename Sequence > struct [01;36m[Kbegin[m[K;
+                                      [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:86:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kend[m[K’ was not declared in this scope
+    for(auto k : [01;31m[Klist_user[m[K){
+                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:86:17:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kend[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:23:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::end[m[K’
+ template< typename Sequence > struct [01;36m[Kend[m[K;
+                                      [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:93:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kutente[m[K’ was not declared in this scope
+    [01;31m[Kutente[m[K k = utente(username,pos_x,pos_y);
+    [01;31m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:93:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kputenv[m[K’
+    [01;36m[Kutente[m[K k = utente(username,pos_x,pos_y);
+    [01;36m[K^~~~~~[m[K
+    [32m[Kputenv[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:94:14:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kremove[m[K’ in ‘[01m[Klist_user[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+    list_user.[01;31m[Kremove[m[K(k);
+              [01;31m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:94:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kk[m[K’ was not declared in this scope
+    list_user.remove([01;31m[Kk[m[K);
+                     [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:104:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kbegin[m[K’ was not declared in this scope
+     for( auto k : [01;31m[Klist_user[m[K){
+                   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:104:19:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kbegin[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:22:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::begin[m[K’
+ template< typename Sequence > struct [01;36m[Kbegin[m[K;
+                                      [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:104:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kend[m[K’ was not declared in this scope
+     for( auto k : [01;31m[Klist_user[m[K){
+                   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:104:19:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kend[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:23:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::end[m[K’
+ template< typename Sequence > struct [01;36m[Kend[m[K;
+                                      [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:146:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kbegin[m[K’ was not declared in this scope
+     for( auto k : [01;31m[Klist_user[m[K){
+                   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:146:19:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kbegin[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:22:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::begin[m[K’
+ template< typename Sequence > struct [01;36m[Kbegin[m[K;
+                                      [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:146:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kend[m[K’ was not declared in this scope
+     for( auto k : [01;31m[Klist_user[m[K){
+                   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:146:19:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kend[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:23:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::end[m[K’
+ template< typename Sequence > struct [01;36m[Kend[m[K;
+                                      [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:181:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kbegin[m[K’ was not declared in this scope
+    for(auto k : [01;31m[Klist_user[m[K){
+                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:181:17:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kbegin[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:105:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::begin[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:22:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::begin[m[K’
+ template< typename Sequence > struct [01;36m[Kbegin[m[K;
+                                      [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/begin.hpp:106:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::begin[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kbegin[m[K( const T& r )
+                                                             [01;36m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:181:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kend[m[K’ was not declared in this scope
+    for(auto k : [01;31m[Klist_user[m[K){
+                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:181:17:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/7/string:51:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/7/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/istream:38[m[K,
+                 from [01m[K/usr/include/c++/7/sstream:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:1[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+   template<typename _Tp> const _Tp* [01;36m[Kend[m[K(const valarray<_Tp>&);
+                                     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/7/bits/range_access.h:107:37:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::end[m[K’
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/list/aux_/begin_end.hpp:17:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list0.hpp:27[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list10.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list/list20.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/mpl/list.hpp:36[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/begin_end_fwd.hpp:23:38:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::end[m[K’
+ template< typename Sequence > struct [01;36m[Kend[m[K;
+                                      [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/range/functions.hpp:19:0[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range_core.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/usr/include/boost/range/end.hpp:100:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::range_adl_barrier::end[m[K’
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type [01;36m[Kend[m[K( const T& r )
+                                                             [01;36m[K^~~[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2

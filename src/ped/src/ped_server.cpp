@@ -41,7 +41,7 @@ int main(int argc, char** argv){
 		cout << green;
 		cout << "  3- PICK AND DELIVERY" << endl;
 		cout << fine;
-		cout << purple;
+		cout << orange;
 		cout << "  4- VISUALIZZAZIONE LISTA UTENTI" << endl << flush;
 		cout << fine;
 		cout << "DIGITARE LA FUNZIONE CHE SI DESIDERA ESEGUIRE: "; cin >> scelta;
@@ -75,6 +75,7 @@ int main(int argc, char** argv){
 				cout << "UTENTE AGGIUNTO CORRETTAMENTE" << endl << flush;
 				cout << fine;  
 			}
+			system("clear");
 		}
 		
 		else if(scelta==2){
@@ -88,6 +89,7 @@ int main(int argc, char** argv){
 			}
 			utente k = utente(username,pos_x,pos_y);
 			list_user.remove(k);
+			system("clear");
 		}
 		
 		else if(scelta==3){
@@ -165,21 +167,21 @@ int main(int argc, char** argv){
 			cout << lightblue;
 			cout << "IL PACCO È ARRIVATO A DESTINAZIONE." << endl << flush;
 			cout << fine;
+			ros::Duration(2,0).sleep();
+			system("clear");
 		}
 		
 		else if(scelta==4){
-			cout << purple;
+			cout << orange;
 			cout << "LISTA UTENTI:" << endl << flush;
 			cout << fine;
 			for(auto k : list_user){
 				cout << k.name << " " << k.x << " " << k.y << endl << flush;
 			}
-			cout << purple;
+			cout << orange;
 			cout << "---" << endl << flush;
 			cout << fine;
 		}
-		
-		cout << endl << "--------------------" << endl << endl << flush;
 	}
 	
 	
