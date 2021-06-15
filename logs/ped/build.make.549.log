@@ -1,0 +1,41 @@
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _ped_generate_messages_check_deps_User
+[  0%] Built target _ped_generate_messages_check_deps_set_user
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[ 15%] Built target ped_generate_messages_eus
+[ 36%] Built target ped_generate_messages_py
+[ 47%] Built target ped_generate_messages_nodejs
+[ 57%] Built target ped_generate_messages_cpp
+[ 68%] Built target ped_generate_messages_lisp
+[35m[1mScanning dependencies of target ped_client[0m
+[35m[1mScanning dependencies of target ped_server[0m
+[ 78%] Built target ped_status
+[ 84%] [32mBuilding CXX object CMakeFiles/ped_client.dir/src/ped_client.cpp.o[0m
+[ 89%] [32mBuilding CXX object CMakeFiles/ped_server.dir/src/ped_server.cpp.o[0m
+[ 89%] Built target ped_generate_messages
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:161:16:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kstd::stringstream ss[m[K’
+   stringstream [01;31m[Kss[m[K;
+                [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:122:16:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::stringstream ss[m[K’ previously declared here
+   stringstream [01;36m[Kss[m[K;
+                [01;36m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:172:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kfin[m[K’ was not declared in this scope
+   cout << [01;31m[Kfin[m[K
+           [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:172:11:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksin[m[K’
+   cout << [01;36m[Kfin[m[K
+           [01;36m[K^~~[m[K
+           [32m[Ksin[m[K
+CMakeFiles/ped_client.dir/build.make:62: recipe for target 'CMakeFiles/ped_client.dir/src/ped_client.cpp.o' failed
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+CMakeFiles/Makefile2:71: recipe for target 'CMakeFiles/ped_client.dir/all' failed
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 94%] [32m[1mLinking CXX executable /home/me/progetto_labiagi/devel/.private/ped/lib/ped/ped_server[0m
+[ 94%] Built target ped_server
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

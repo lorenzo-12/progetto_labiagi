@@ -12,16 +12,24 @@ std_msgs::String m;
 ros::Publisher talk;
 ros::Subscriber listener;
 bool p=false;
+bool d=false;
 bool loop=false;
+bool aspetta=false;
+bool ok=false;
 string username;
 float pos_x;
 float pos_y;
+int k=0;
 vector<string> result;
 ros::Publisher pub_goal;
+ros::Subscriber pub_status;
+vector<float> v = {1,2,3,4};
+
 
 
 void CB(const std_msgs::String::ConstPtr& msg){
 	cout << "ho sentito: " << msg->data.c_str() << endl << flush;
+	cout << "p: " << p << "   d: " << d << endl << flush;
 	if(p){
 		s=msg->data;
 		boost::split(result, s, boost::is_any_of(" "));
@@ -34,7 +42,55 @@ void CB(const std_msgs::String::ConstPtr& msg){
 		goal.pose.position.x=pos_x;
 		goal.pose.position.y=pos_y;
 		pub_goal.publish(goal);
+		ok=true;
+		
+		while(ros::ok()){
+			if(aspetta) break;
+			ros::spinOnce();
+		}
+		
+		cout << red;
+		cout << "fine ciclo while" << endl << flush;
+		cout << fine;
+		
+		m.data="pick";
+		talk.publish(m);
+		ros::spinOnce();
+		
+		aspetta=false;
+		ok=false;
 		p=false;
+		return;
+	}
+	if(d){
+		s=msg->data;
+		boost::split(result, s, boost::is_any_of(" "));
+		
+		username=result[0]; pos_x=stof(result[1]); pos_y=stof(result[2]);
+		
+		cout << "username: " << username << "   x: " << pos_x << "   y: " << pos_y << endl << flush;
+		goal.header.frame_id="map";
+		goal.header.stamp = ros::Time::now();
+		goal.pose.position.x=pos_x;
+		goal.pose.position.y=pos_y;
+		pub_goal.publish(goal);
+		ok=true;
+		
+		while(ros::ok()){
+			if(aspetta) break;
+			ros::spinOnce();
+		}
+		cout << red;
+		cout << "fine ciclo while" << endl << flush;
+		cout << fine;
+		
+		m.data="delivery";
+		talk.publish(m);
+		ros::spinOnce();
+		
+		aspetta=false;
+		ok=false;
+		d=false;
 		return;
 	}
 	if(msg->data=="opzioni"){
@@ -47,6 +103,10 @@ void CB(const std_msgs::String::ConstPtr& msg){
 		cout << "pick" << endl << flush;
 		p=true;
 	}
+	else if(msg->data=="delivery"){
+		cout << "delivery" << endl << flush;
+		d=true;
+	}
 	else{
 		m.data=msg->data;
 		talk.publish(m);
@@ -55,8 +115,17 @@ void CB(const std_msgs::String::ConstPtr& msg){
 	}
 }
 
-void nulla(const std_msgs::String::ConstPtr& msg){
-	//ROS_INFO("IL ROBOT HA SCRITTO: %s",msg->data.c_str());
+void stato_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& status){
+	k++;
+	if(ok){
+		cout << "status distance: " << status->distance_to_global_goal << "\r"<< flush;
+		v.insert(v.begin()+k%4,status->distance_to_global_goal);
+	}
+	if(v.at(0)==v.at(1) and v.at(1)==v.at(2) and v.at(2)==v.at(3) and ok){
+		aspetta=true;
+		v = {1,2,3,4};
+	}
+	return;
 }
 
 int main(int argc, char** argv){
@@ -66,6 +135,8 @@ int main(int argc, char** argv){
 	
 	//publisher necessario per avvisare il robot che deve raggiungere un determinato goal
 	pub_goal = n.advertise<geometry_msgs::PoseStamped>("/move_base_simple/goal", 1000);
+	
+	pub_status = n.subscribe("/planner_status", 1000, stato_robot);
 	
 	talk = n.advertise<std_msgs::String>("/ped_stc",1000);
 	listener = n.subscribe("/ped_cts",1000,CB);

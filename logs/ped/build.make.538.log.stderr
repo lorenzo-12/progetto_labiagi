@@ -1,0 +1,14 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:24:1:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kvector[m[K’
+ [01;31m[Kvector[m[K<float> v = {1,2,3,4};
+ [01;31m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:90:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_status[m[K’ was not declared in this scope
+  [01;31m[Kpub_status[m[K = n.subscribe("/planner_status", 1000, stato_robot);
+  [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:90:2:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksi_status[m[K’
+  [01;36m[Kpub_status[m[K = n.subscribe("/planner_status", 1000, stato_robot);
+  [01;36m[K^~~~~~~~~~[m[K
+  [32m[Ksi_status[m[K
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2

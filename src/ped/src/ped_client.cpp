@@ -10,11 +10,13 @@ string s;
 string r;
 std_msgs::String msg;
 bool loop=false;
+bool aspetta=false;
 string username;
 float pos_x;
 float pos_y;
 bool esegui=true;
 bool esiste=false;
+stringstream ss;
 
 void stampa_opzioni(){
 	cout << "COMANDI DISPONIBILI (0 PER TERMINARE):" << endl;
@@ -36,6 +38,8 @@ void CB(const std_msgs::String::ConstPtr& msg){
 	cout << "ho sentito: " << msg->data.c_str() << endl << flush;
 	r=msg->data;
 	if(msg->data=="opzioni") stampa_opzioni();
+	if(msg->data=="pick") aspetta=true;
+	if(msg->data=="delivery") aspetta=true;
 	loop=true;
 }
 
@@ -111,18 +115,77 @@ int main(int argc, char** argv){
 				cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
 			}
 		}
+		esiste=false;
+		
 		cout << username << pos_x << pos_y << endl << flush;
 		msg.data="pick";
 		talk.publish(msg);
 		ros::spinOnce();
 		
-		stringstream ss;
+		ss.str("");
 		ss << username << " " << pos_x << " " << pos_y << " ";
 		msg.data=ss.str();
 		talk.publish(msg);
 		ros::spinOnce();
 		
+		cout << red;
+		cout << "inizio ad aspettare" << endl << flush;
+		cout << fine;
+		
+		while(ros::ok()){
+			if(aspetta) break;
+			ros::spinOnce();
+		}
+		
+		cout << red;
+		cout << "ho finto di apsettare" << endl << flush;
+		cout << fine;
+		
+		while(!esiste){	
+			cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
+			for( auto k : list_user){
+				if(k.name==username){
+					pos_x=k.x;
+					pos_y=k.y;
+					esiste=true;
+					break;
+				}
+			}
+			if(esiste==false){
+				cout << "L'UTENTE INSERITO NON ESISTE NEL DATABASE, SI PREGA DI RIPROVARE." << endl << flush;
+				cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
+			}
+		}
+		esiste=false;
+		cout << username << pos_x << pos_y << endl << flush;
+		msg.data="delivery";
+		talk.publish(msg);
+		ros::spinOnce();
+		
+		ss.str("");
+		ss << username << " " << pos_x << " " << pos_y << " ";
+		msg.data=ss.str();
+		talk.publish(msg);
+		ros::spinOnce();
+		
+		aspetta=false;
 		esegui=false;
+		
+		cout << red;
+		cout << "inizio ad aspettare" << endl << flush;
+		cout << fine;
+		
+		while(ros::ok()){
+			if(aspetta) break;
+			ros::spinOnce();
+		}
+		
+		cout << red;
+		cout << "ho finto di apsettare" << endl << flush;
+		cout << fine;
+		
+		aspetta=false;
+		
 	}
 	if(s=="4" and esegui){
 		cout << orange;
