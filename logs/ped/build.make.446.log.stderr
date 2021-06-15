@@ -1,0 +1,132 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:15:8:[m[K [01;31m[Kerror: [m[K‘[01m[KdialogFeedback[m[K’ in namespace ‘[01m[Kped[m[K’ does not name a type
+   ped::[01;31m[KdialogFeedback[m[K feedback;
+        [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:16:8:[m[K [01;31m[Kerror: [m[K‘[01m[KdialogResult[m[K’ in namespace ‘[01m[Kped[m[K’ does not name a type
+   ped::[01;31m[KdialogResult[m[K result;
+        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:22:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kactionlib_tutorials[m[K’ does not name a type
+   void executeCB(const [01;31m[Kactionlib_tutorials[m[K::msgGoalConstPtr &goal){
+                        [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:22:61:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+   void executeCB(const actionlib_tutorials::msgGoalConstPtr [01;31m[K&[m[Kgoal){
+                                                             [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:22:61:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:22:61:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:22:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal[m[K’ does not name a type; did you mean ‘[01m[Kpowl[m[K’?
+   void executeCB(const actionlib_tutorials::msgGoalConstPtr &[01;31m[Kgoal[m[K){
+                                                              [01;31m[K^~~~[m[K
+                                                              [32m[Kpowl[m[K
+In file included from [01m[K/usr/include/boost/bind.hpp:22:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/publisher.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+/usr/include/boost/bind/bind.hpp: In instantiation of ‘[01m[Kstruct boost::_bi::result_traits<boost::_bi::unspecified, void (PedServer::*)(...) &>[m[K’:
+[01m[K/usr/include/boost/bind/bind.hpp:1284:48:[m[K   required from ‘[01m[Kclass boost::_bi::bind_t<boost::_bi::unspecified, void (PedServer::*)(...) &, boost::_bi::list2<boost::_bi::value<PedServer*>, boost::arg<1> > >[m[K’
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:18:59:[m[K   required from here
+[01m[K/usr/include/boost/bind/bind.hpp:75:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid (PedServer::*)(...) &[m[K’ is not a class, struct, or union type
+     typedef typename F::result_type [01;31m[Ktype[m[K;
+                                     [01;31m[K^~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In constructor ‘[01m[KPedServer::PedServer(std::__cxx11::string)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:20:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kas_[m[K’ was not declared in this scope
+    [01;31m[Kas_[m[K.start();
+    [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:20:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kas[m[K’
+    [01;36m[Kas_[m[K.start();
+    [01;36m[K^~~[m[K
+    [32m[Kas[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:29:3:[m[K [01;31m[Kerror: [m[K‘[01m[KdialogServer[m[K’ was not declared in this scope
+   [01;31m[KdialogServer[m[K dialog("ped_topic");
+   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:29:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KPedServer[m[K’
+   [01;36m[KdialogServer[m[K dialog("ped_topic");
+   [01;36m[K^~~~~~~~~~~~[m[K
+   [32m[KPedServer[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:8:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+ [01;31m[Kstring[m[K s;
+ [01;31m[K^~~~~~[m[K
+ [32m[Kstdin[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:20:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope
+   [01;31m[Kcout[m[K << "digita qualcosa: " << flush;
+   [01;31m[K^~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:20:3:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/melodic/include/ros/time.h:54:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/usr/include/c++/7/iostream:61:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::cout[m[K’
+   extern ostream [01;36m[Kcout[m[K;  /// Linked to standard output
+                  [01;36m[K^~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:20:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kflush[m[K’ was not declared in this scope
+   cout << "digita qualcosa: " << [01;31m[Kflush[m[K;
+                                  [01;31m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:20:34:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/usr/include/c++/7/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/usr/include/c++/7/ostream:612:5:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::flush[m[K’
+     [01;36m[Kflush[m[K(basic_ostream<_CharT, _Traits>& __os)
+     [01;36m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:21:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcin[m[K’ was not declared in this scope
+   [01;31m[Kcin[m[K >> s;
+   [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:21:3:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/melodic/include/ros/time.h:54:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/usr/include/c++/7/iostream:60:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::cin[m[K’
+   extern istream [01;36m[Kcin[m[K;  /// Linked to standard input
+                  [01;36m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:21:10:[m[K [01;31m[Kerror: [m[K‘[01m[Ks[m[K’ was not declared in this scope
+   cin >> [01;31m[Ks[m[K;
+          [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:26:23:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kped::msgResult {aka ped::msgResult_<std::allocator<void> >}[m[K’ and ‘[01m[Kactionlib::SimpleActionClient<ped::msgAction_<std::allocator<void> > >::ResultConstPtr {aka boost::shared_ptr<const ped::msgResult_<std::allocator<void> > >}[m[K’)
+   result=ac.getResult([01;31m[K)[m[K;
+                       [01;31m[K^[m[K
+In file included from [01m[K/home/me/progetto_labiagi/devel/.private/ped/include/ped/msgActionResult.h:20:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/devel/.private/ped/include/ped/msgAction.h:19[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:4[m[K:
+[01m[K/home/me/progetto_labiagi/devel/.private/ped/include/ped/msgResult.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: ped::msgResult_<std::allocator<void> >& ped::msgResult_<std::allocator<void> >::operator=(const ped::msgResult_<std::allocator<void> >&)
+ struct [01;36m[KmsgResult_[m[K
+        [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/devel/.private/ped/include/ped/msgResult.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kactionlib::SimpleActionClient<ped::msgAction_<std::allocator<void> > >::ResultConstPtr {aka boost::shared_ptr<const ped::msgResult_<std::allocator<void> > >}[m[K’ to ‘[01m[Kconst ped::msgResult_<std::allocator<void> >&[m[K’
+[01m[K/home/me/progetto_labiagi/devel/.private/ped/include/ped/msgResult.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: ped::msgResult_<std::allocator<void> >& ped::msgResult_<std::allocator<void> >::operator=(ped::msgResult_<std::allocator<void> >&&)
+[01m[K/home/me/progetto_labiagi/devel/.private/ped/include/ped/msgResult.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kactionlib::SimpleActionClient<ped::msgAction_<std::allocator<void> > >::ResultConstPtr {aka boost::shared_ptr<const ped::msgResult_<std::allocator<void> > >}[m[K’ to ‘[01m[Kped::msgResult_<std::allocator<void> >&&[m[K’
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:28:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kped::msgResult {aka struct ped::msgResult_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kc_str[m[K’
+   cout << "result: " << result.[01;31m[Kc_str[m[K() << endl << flush;
+                                [01;31m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:28:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ was not declared in this scope
+   cout << "result: " << result.c_str() << [01;31m[Kendl[m[K << flush;
+                                           [01;31m[K^~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:28:43:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/usr/include/c++/7/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/usr/include/c++/7/ostream:590:5:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::endl[m[K’
+     [01;36m[Kendl[m[K(basic_ostream<_CharT, _Traits>& __os)
+     [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/boost/function/detail/maybe_include.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/function/detail/function_iterate.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp:52[m[K,
+                 from [01m[K/usr/include/boost/function.hpp:64[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+/usr/include/boost/function/function_template.hpp: In instantiation of ‘[01m[Kstatic void boost::detail::function::void_function_obj_invoker1<FunctionObj, R, T0>::invoke(boost::detail::function::function_buffer&, T0) [with FunctionObj = boost::_bi::bind_t<boost::_bi::unspecified, void (PedServer::*)(...) &, boost::_bi::list2<boost::_bi::value<PedServer*>, boost::arg<1> > >; R = void; T0 = const boost::shared_ptr<const ped::msgGoal_<std::allocator<void> > >&][m[K’:
+[01m[K/usr/include/boost/function/function_template.hpp:925:38:[m[K   required from ‘[01m[Kvoid boost::function1<R, T1>::assign_to(Functor) [with Functor = boost::_bi::bind_t<boost::_bi::unspecified, void (PedServer::*)(...) &, boost::_bi::list2<boost::_bi::value<PedServer*>, boost::arg<1> > >; R = void; T0 = const boost::shared_ptr<const ped::msgGoal_<std::allocator<void> > >&][m[K’
+[01m[K/usr/include/boost/function/function_template.hpp:716:7:[m[K   required from ‘[01m[Kboost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<(! boost::is_integral<Functor>::value), int>::type) [with Functor = boost::_bi::bind_t<boost::_bi::unspecified, void (PedServer::*)(...) &, boost::_bi::list2<boost::_bi::value<PedServer*>, boost::arg<1> > >; R = void; T0 = const boost::shared_ptr<const ped::msgGoal_<std::allocator<void> > >&; typename boost::enable_if_c<(! boost::is_integral<Functor>::value), int>::type = int][m[K’
+[01m[K/usr/include/boost/function/function_template.hpp:1061:16:[m[K   required from ‘[01m[Kboost::function<R(T0)>::function(Functor, typename boost::enable_if_c<(! boost::is_integral<Functor>::value), int>::type) [with Functor = boost::_bi::bind_t<boost::_bi::unspecified, void (PedServer::*)(...) &, boost::_bi::list2<boost::_bi::value<PedServer*>, boost::arg<1> > >; R = void; T0 = const boost::shared_ptr<const ped::msgGoal_<std::allocator<void> > >&; typename boost::enable_if_c<(! boost::is_integral<Functor>::value), int>::type = int][m[K’
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:19:19:[m[K   required from here
+[01m[K/usr/include/boost/function/function_template.hpp:159:11:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(boost::_bi::bind_t<boost::_bi::unspecified, void (PedServer::*)(...) &, boost::_bi::list2<boost::_bi::value<PedServer*>, boost::arg<1> > >) (const boost::shared_ptr<const ped::msgGoal_<std::allocator<void> > >&)[m[K’
+           [01;31m[KB[m[KOOST_FUNCTION_RETURN((*f)(BOOST_FUNCTION_ARGS));
+           [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

@@ -298,6 +298,19 @@ roscpp_generate_messages_cpp/fast:
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named ped_status
+
+# Build rule for target.
+ped_status: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_status
+.PHONY : ped_status
+
+# fast build rule for target.
+ped_status/fast:
+	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/build
+.PHONY : ped_status/fast
+
+#=============================================================================
 # Target rules for targets named download_extra_data
 
 # Build rule for target.
@@ -806,6 +819,33 @@ src/ped_server.cpp.s:
 	$(MAKE) -f CMakeFiles/ped_server.dir/build.make CMakeFiles/ped_server.dir/src/ped_server.cpp.s
 .PHONY : src/ped_server.cpp.s
 
+src/ped_status.o: src/ped_status.cpp.o
+
+.PHONY : src/ped_status.o
+
+# target to build an object file
+src/ped_status.cpp.o:
+	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/src/ped_status.cpp.o
+.PHONY : src/ped_status.cpp.o
+
+src/ped_status.i: src/ped_status.cpp.i
+
+.PHONY : src/ped_status.i
+
+# target to preprocess a source file
+src/ped_status.cpp.i:
+	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/src/ped_status.cpp.i
+.PHONY : src/ped_status.cpp.i
+
+src/ped_status.s: src/ped_status.cpp.s
+
+.PHONY : src/ped_status.s
+
+# target to generate assembly for a file
+src/ped_status.cpp.s:
+	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/src/ped_status.cpp.s
+.PHONY : src/ped_status.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -828,6 +868,7 @@ help:
 	@echo "... tests"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
+	@echo "... ped_status"
 	@echo "... download_extra_data"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"
@@ -870,6 +911,9 @@ help:
 	@echo "... src/ped_server.o"
 	@echo "... src/ped_server.i"
 	@echo "... src/ped_server.s"
+	@echo "... src/ped_status.o"
+	@echo "... src/ped_status.i"
+	@echo "... src/ped_status.s"
 .PHONY : help
 
 

@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_runtime
   roscpp
   std_msgs
+  #actionlib_msgs
 )
 
 
@@ -34,23 +35,23 @@ find_package(catkin REQUIRED COMPONENTS
  )
 
 ## Generate actions in the 'action' folder
-# add_action_files(
-#   FILES
-#   Action1.action
-#   Action2.action
-# )
+#add_action_files(
+  #DIRECTORY action
+  #FILES msg.action
+#)
 
 ## Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
    std_msgs
+   #actionlib_msgs
  )
 
 
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ped
-  CATKIN_DEPENDS message_generation roscpp std_msgs
+  CATKIN_DEPENDS message_generation roscpp std_msgs #actionlib_msgs
   #DEPENDS system_lib
 )
 
@@ -69,3 +70,6 @@ add_executable(ped_client src/ped_client.cpp)
 target_link_libraries(ped_client ${catkin_LIBRARIES})
 add_dependencies(ped_client ${ped_EXPORTED_TARGETS})
 
+add_executable(ped_status src/ped_status.cpp)
+target_link_libraries(ped_status ${catkin_LIBRARIES})
+add_dependencies(ped_status ${ped_EXPORTED_TARGETS})

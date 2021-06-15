@@ -1,0 +1,16 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:47:5:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd_msgs::String {aka std_msgs::String_<std::allocator<void> >}[m[K’ and ‘[01m[Kconst char [5][m[K’)
+   m=[01;31m[K"test"[m[K;
+     [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:4:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/std_msgs/String.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: std_msgs::String_<std::allocator<void> >& std_msgs::String_<std::allocator<void> >::operator=(const std_msgs::String_<std::allocator<void> >&)
+ struct [01;36m[KString_[m[K
+        [01;36m[K^~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/std_msgs/String.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [5][m[K’ to ‘[01m[Kconst std_msgs::String_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/melodic/include/std_msgs/String.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: std_msgs::String_<std::allocator<void> >& std_msgs::String_<std::allocator<void> >::operator=(std_msgs::String_<std::allocator<void> >&&)
+[01m[K/opt/ros/melodic/include/std_msgs/String.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [5][m[K’ to ‘[01m[Kstd_msgs::String_<std::allocator<void> >&&[m[K’
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

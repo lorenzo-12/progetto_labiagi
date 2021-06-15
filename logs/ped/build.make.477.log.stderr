@@ -1,0 +1,14 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:20:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kreset_sessione[m[K’ was not declared in this scope
+  ros::Subscriber sub = n.subscribe("/move_base_simple/goal", 1000, [01;31m[Kreset_sessione[m[K);
+                                                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:21:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_out[m[K’ was not declared in this scope
+  [01;31m[Kpub_out[m[K = n.advertise<std_msgs::String>("/stato_robot", 1000);
+  [01;31m[K^~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:24:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kstato_robot[m[K’ was not declared in this scope
+  ros::Subscriber pub_status = n.subscribe("/planner_status", 1000, [01;31m[Kstato_robot[m[K);
+                                                                    [01;31m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

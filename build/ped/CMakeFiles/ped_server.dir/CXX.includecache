@@ -89,6 +89,10 @@ geometry_msgs/PoseStamped.h
 /home/me/progetto_labiagi/src/ped/src/geometry_msgs/PoseStamped.h
 /home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h
 -
+bits/stdc++.h
+-
+boost/algorithm/string.hpp
+-
 
 /home/me/progetto_labiagi/src/ped/src/utils.h
 sstream

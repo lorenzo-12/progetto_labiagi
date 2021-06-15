@@ -1,0 +1,14 @@
+[31m[1mCMake Error[0m at /home/me/progetto_labiagi/build/ped/cmake/ped-genmsg.cmake:3 (message):
+  Could not find messages which
+  '/home/me/progetto_labiagi/devel/.private/ped/share/ped/msg/msgAction.msg'
+  depends on.  Did you forget to specify generate_messages(DEPENDENCIES ...)?
+
+  Cannot locate message [String] in package [ped] with paths
+  [['/home/me/progetto_labiagi/src/ped/msg',
+  '/home/me/progetto_labiagi/devel/.private/ped/share/ped/msg']]
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
+  CMakeLists.txt:44 (generate_messages)
+
+
+make: *** [cmake_check_build_system] Error 1

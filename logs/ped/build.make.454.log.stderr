@@ -1,0 +1,21 @@
+CMakeFiles/ped_server.dir/src/ped_server.cpp.o: In function `actionlib::ActionServerBase<ped::msgAction_<std::allocator<void> > >::ActionServerBase(boost::function<void (actionlib::ServerGoalHandle<ped::msgAction_<std::allocator<void> > >)>, boost::function<void (actionlib::ServerGoalHandle<ped::msgAction_<std::allocator<void> > >)>, bool)':
+ped_server.cpp:(.text._ZN9actionlib16ActionServerBaseIN3ped10msgAction_ISaIvEEEEC2EN5boost8functionIFvNS_16ServerGoalHandleIS4_EEEEESB_b[_ZN9actionlib16ActionServerBaseIN3ped10msgAction_ISaIvEEEEC5EN5boost8functionIFvNS_16ServerGoalHandleIS4_EEEEESB_b]+0xaa): undefined reference to `actionlib::GoalIDGenerator::GoalIDGenerator()'
+CMakeFiles/ped_server.dir/src/ped_server.cpp.o: In function `actionlib::StatusTracker<ped::msgAction_<std::allocator<void> > >::StatusTracker(boost::shared_ptr<ped::msgActionGoal_<std::allocator<void> > const> const&)':
+ped_server.cpp:(.text._ZN9actionlib13StatusTrackerIN3ped10msgAction_ISaIvEEEEC2ERKN5boost10shared_ptrIKNS1_14msgActionGoal_IS3_EEEE[_ZN9actionlib13StatusTrackerIN3ped10msgAction_ISaIvEEEEC5ERKN5boost10shared_ptrIKNS1_14msgActionGoal_IS3_EEEE]+0x6f): undefined reference to `actionlib::GoalIDGenerator::GoalIDGenerator()'
+ped_server.cpp:(.text._ZN9actionlib13StatusTrackerIN3ped10msgAction_ISaIvEEEEC2ERKN5boost10shared_ptrIKNS1_14msgActionGoal_IS3_EEEE[_ZN9actionlib13StatusTrackerIN3ped10msgAction_ISaIvEEEEC5ERKN5boost10shared_ptrIKNS1_14msgActionGoal_IS3_EEEE]+0xcc): undefined reference to `actionlib::GoalIDGenerator::generateID()'
+CMakeFiles/ped_server.dir/src/ped_server.cpp.o: In function `actionlib::StatusTracker<ped::msgAction_<std::allocator<void> > >::StatusTracker(actionlib_msgs::GoalID_<std::allocator<void> > const&, unsigned int)':
+ped_server.cpp:(.text._ZN9actionlib13StatusTrackerIN3ped10msgAction_ISaIvEEEEC2ERKN14actionlib_msgs7GoalID_IS3_EEj[_ZN9actionlib13StatusTrackerIN3ped10msgAction_ISaIvEEEEC5ERKN14actionlib_msgs7GoalID_IS3_EEj]+0x5c): undefined reference to `actionlib::GoalIDGenerator::GoalIDGenerator()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/me/progetto_labiagi/devel/.private/ped/lib/ped/ped_server] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:27:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kmanipulator[m[K’ has not been declared
+   [01;31m[Kmanipulator[m[K::DetectionResultConstPtr result = ac.getResult();
+   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:29:31:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kped::msgResult {aka ped::msgResult_<std::allocator<void> >}[m[K’
+   cout << "result: " << result[01;31m[K->[m[Kresult.c_str() << endl << flush;
+                               [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

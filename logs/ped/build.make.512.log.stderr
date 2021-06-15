@@ -1,0 +1,26 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:49:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kusername[m[K’ was not declared in this scope
+   cout << "USERNAME: "; cin >> [01;31m[Kusername[m[K;
+                                [01;31m[K^~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:49:32:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kbasename[m[K’
+   cout << "USERNAME: "; cin >> [01;36m[Kusername[m[K;
+                                [01;36m[K^~~~~~~~[m[K
+                                [32m[Kbasename[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:50:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kpos_x[m[K’ was not declared in this scope
+   cout << "POSITION X: "; cin >> [01;31m[Kpos_x[m[K;
+                                  [01;31m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:50:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kfpos_t[m[K’
+   cout << "POSITION X: "; cin >> [01;36m[Kpos_x[m[K;
+                                  [01;36m[K^~~~~[m[K
+                                  [32m[Kfpos_t[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:51:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kpos_y[m[K’ was not declared in this scope
+   cout << "POSITION Y: "; cin >> [01;31m[Kpos_y[m[K;
+                                  [01;31m[K^~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:51:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kfpos_t[m[K’
+   cout << "POSITION Y: "; cin >> [01;36m[Kpos_y[m[K;
+                                  [01;36m[K^~~~~[m[K
+                                  [32m[Kfpos_t[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

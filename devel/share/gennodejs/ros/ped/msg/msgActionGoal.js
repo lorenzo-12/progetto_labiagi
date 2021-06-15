@@ -1,0 +1,1 @@
+/home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgActionGoal.js

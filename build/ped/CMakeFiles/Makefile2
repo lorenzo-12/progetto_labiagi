@@ -400,6 +400,47 @@ clean: CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/ped_status.dir
+
+# All Build rule for target.
+CMakeFiles/ped_status.dir/all: CMakeFiles/ped_generate_messages_py.dir/all
+CMakeFiles/ped_status.dir/all: CMakeFiles/ped_generate_messages_lisp.dir/all
+CMakeFiles/ped_status.dir/all: CMakeFiles/ped_generate_messages_nodejs.dir/all
+CMakeFiles/ped_status.dir/all: CMakeFiles/ped_generate_messages_cpp.dir/all
+CMakeFiles/ped_status.dir/all: CMakeFiles/ped_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/depend
+	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=29,30 "Built target ped_status"
+.PHONY : CMakeFiles/ped_status.dir/all
+
+# Include target in all.
+all: CMakeFiles/ped_status.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ped_status.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/progetto_labiagi/build/ped/CMakeFiles 15
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ped_status.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/progetto_labiagi/build/ped/CMakeFiles 0
+.PHONY : CMakeFiles/ped_status.dir/rule
+
+# Convenience name for target.
+ped_status: CMakeFiles/ped_status.dir/rule
+
+.PHONY : ped_status
+
+# clean rule for target.
+CMakeFiles/ped_status.dir/clean:
+	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/clean
+.PHONY : CMakeFiles/ped_status.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/ped_status.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/download_extra_data.dir
 
 # All Build rule for target.

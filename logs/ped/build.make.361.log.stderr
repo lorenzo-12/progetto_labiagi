@@ -1,0 +1,15 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:65:7:[m[K [01;31m[Kerror: [m[K‘[01m[KspinOnce[m[K’ was not declared in this scope
+   ros:[01;31m[KspinOnce[m[K();
+       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:65:7:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/melodic/include/ros/node_handle.h:47:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:2[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/init.h:147:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::spinOnce[m[K’
+ ROSCPP_DECL void [01;36m[KspinOnce[m[K();
+                  [01;36m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2

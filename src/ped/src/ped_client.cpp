@@ -1,96 +1,42 @@
+
 #include "utils.h"
 #include "ros/ros.h"
 #include "geometry_msgs/PoseStamped.h"
 #include "/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h"
 
 using namespace std;
-geometry_msgs::PoseStamped goal;
-ros::Publisher pub_out;
+list<utente> list_user;
+string s;
+string r;
 std_msgs::String msg;
-vector<float> v = {1,2,3,4};
+bool loop=false;
+string username;
+float pos_x;
+float pos_y;
+bool esegui=true;
+bool esiste=false;
 
-
-
-//serve per inserire i valori della distanza allìinterno del vettore e fare in modo che tali valori 
-//vengano inseriti in cerchio
-int i=0;
-
-//serve per tener traccia delle volte che è stata chiamata la funzione di callBack
-int k=0; 
-
-//rappresenta la distanza massima tra il punto di partenza del robot e il punto di arrivo
-float dist=0;
-
-//rappresenta la distanza del robot istante per istante
-float dist_att=0;
-
-//rappresenta la percentuale di completamento del percorso
-int p=0;
-
-bool sessione=false; //serve per far si che la funzione di callback "robot_status" venga eseguita solamente quando il robot sta 
-				     //eseguendo un'azione
-				    
-				    
-void stato_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& status){
-	
-	//la prima volta (per sessione) che viene chiamata la funzione si aspettano 2 secondi in modo da evitare che i precedenti
-	//messaggi presenti sul topic vengano usati e mandino lo stato direttamente in FINITO
-	if(k==0){
-		ros::Duration(2, 0).sleep();
-		sessione=true;
-	}
-
-	//siccome capita che tra i primi messaggi ci siano alcuni vecchi (con una distanza vicina allo zero) se nell/andare avanti
-	//la distanza aumenta imposto la distanza totale del percorso al valore maggiore che ho ottenuto
-	if(status->distance_to_global_goal>dist){
-		dist=status->distance_to_global_goal;
-	}
-	
-	//se non sono arrivato alla fine stampo dei valori tra cui la percentuale del cammino che si è fatto
-	if(sessione){
-		dist_att=dist-status->distance_to_global_goal;
-		p=(dist_att/dist)*100;
-		if(p<0) p=0;
-		cout << "\rdist: " << setprecision(4) << dist << "  dist_att: "<< fixed << setprecision(4) << dist_att;
-		cout << red;
-		cout << "  completamento: " << p << "% " << flush;
-		cout << fine;
-	}
-	
-	//mi accorgo che sono arrivato alla fine del percorso perchè i valori della distanza del robot dal goal
-	//pubblicati sul topic "/planner_status" smettono di variare, quindi nel momento in cui per 6 volte mi ritrovo la distanza 
-	//sempre uguale considero che sono arrivato
-	if(v.at(0)==v.at(1) and v.at(1)==v.at(2) and v.at(2)==v.at(3) and sessione){
-		cout << "\rdist: " << setprecision(4) << dist << "  dist_att: "<< fixed << setprecision(4) << dist_att;
-		cout << red;
-		cout << "  completamento: 100%" << " " << flush;
-		cout << fine;
-		string s="robot arrivato";
-		msg.data=s;
-		cout << endl << flush;
-		///cout << "invio la risposta" << endl << flush;
-		pub_out.publish(msg);
-		sessione=false;
-		p=0; dist=0; dist_att=0; i=0;
-		v = {1,2,3,4};
-	}
-	
-	//ad ogni chiamata della funzione incremento le variabili e aggiungo nella prossiam posizione del vettore v il valore della
-	//distanza, in modo che quando tutte e 6 le posizioni del vettore avranno lo stesso valore allora potrò considerare 
-	//il robot arrivato al goal
-	if(sessione){
-		v.insert(v.begin()+i,status->distance_to_global_goal);
-		k++;
-		i++;
-		i=i%4;
-	}
-
-	return;
+void stampa_opzioni(){
+	cout << "COMANDI DISPONIBILI (0 PER TERMINARE):" << endl;
+	cout << red;
+	cout << "  1- INSERIMENTO/MODIFICA UTENTE NEL DATABASE" << endl;
+	cout << fine;
+	cout << blue;
+	cout << "  2- RIMOZIONE UTENTE DAL DATABESE" << endl;
+	cout << fine;
+	cout << green;
+	cout << "  3- PICK AND DELIVERY" << endl;
+	cout << fine;
+	cout << orange;
+	cout << "  4- VISUALIZZAZIONE LISTA UTENTI" << endl << flush;
+	cout << fine;
 }
 
-void reset_sessione(const geometry_msgs::PoseStamped::ConstPtr& status){
-	//cout << "HO RESETTATO LA SESSIONE" << endl << flush;
-	k=0;
+void CB(const std_msgs::String::ConstPtr& msg){
+	cout << "ho sentito: " << msg->data.c_str() << endl << flush;
+	r=msg->data;
+	if(msg->data=="opzioni") stampa_opzioni();
+	loop=true;
 }
 
 int main(int argc, char** argv){
@@ -98,17 +44,114 @@ int main(int argc, char** argv){
 	ros::init(argc, argv, "ped_test");
 	ros::NodeHandle n;
 	
-	ros::Subscriber sub = n.subscribe("/move_base_simple/goal", 1000, reset_sessione);
-	pub_out = n.advertise<std_msgs::String>("/stato_robot", 1000);
+	ros::Publisher talk = n.advertise<std_msgs::String>("/ped_cts",1000);
+	ros::Subscriber listener = n.subscribe("/ped_stc",1000,CB);
 	
-	//subscriber al topic /planner_status dove è presente la distanza del robot dal goal
-	ros::Subscriber pub_status = n.subscribe("/planner_status", 1000, stato_robot);
-	sessione=true;
+	while(ros::ok()){	
+	cout << "digita qualcosa: " << flush; cin >> s;
+	esegui=true;
+	if(s=="0") return 0;
 	
-	ros::spin();
+	if(s=="1" and esegui){
+		cout << "USERNAME: "; cin >> username;
+		cout << "POSITION X: "; cin >> pos_x;
+		cout << "POSITION Y: "; cin >> pos_y;
+		int trovato=0;
+		for(auto& k : list_user){
+			if(k.name==username){
+				trovato=1;
+				k.x=pos_x;
+				k.y=pos_y;
+			}
+		}
+		if(trovato==1){
+			cout << red;
+			cout << "UTENTE GIÀ PRESENTE" << endl << flush;
+			cout << fine;
+		}
+		else{
+			utente tmp = utente(username,pos_x,pos_y);
+			list_user.push_back(tmp);
+			cout << red;
+			cout << "UTENTE AGGIUNTO CORRETTAMENTE" << endl << flush;
+			cout << fine;  
+		}
+		system("clear");
+		stampa_opzioni();
+		esegui=false;
+	}
+	if(s=="2" and esegui){
+		cout << "USERNAME: "; cin >> username;
+		for(auto k : list_user){
+			if(k.name==username){
+				pos_x=k.x;
+				pos_y=k.y;
+				break;
+			}
+		}
+		utente k = utente(username,pos_x,pos_y);
+		list_user.remove(k);
+		system("clear");
+		stampa_opzioni();
+		esegui=false;
+	}
+	if(s=="3" and esegui){
+		while(!esiste){	
+			cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
+			for( auto k : list_user){
+				if(k.name==username){
+					pos_x=k.x;
+					pos_y=k.y;
+					esiste=true;
+					break;
+				}
+			}
+			if(esiste==false){
+				cout << "L'UTENTE INSERITO NON ESISTE NEL DATABASE, SI PREGA DI RIPROVARE." << endl << flush;
+				cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
+			}
+		}
+		cout << username << pos_x << pos_y << endl << flush;
+		msg.data="pick";
+		talk.publish(msg);
+		ros::spinOnce();
+		
+		stringstream ss;
+		ss << username << " " << pos_x << " " << pos_y << " ";
+		msg.data=ss.str();
+		talk.publish(msg);
+		ros::spinOnce();
+		
+		esegui=false;
+	}
+	if(s=="4" and esegui){
+		cout << orange;
+		cout << "LISTA UTENTI:" << endl << flush;
+		cout << fine;
+		for(auto k : list_user){
+			cout << k.name << " " << k.x << " " << k.y << endl << flush;
+		}
+		cout << orange;
+		cout << "---" << endl << flush;
+		cout << fine;
+		stampa_opzioni();
+		esegui=false;
+	}
+	if(esegui){
+		msg.data=s;
+		talk.publish(msg);
+		ros::spinOnce();
+	}
+	
+	while(ros::ok() and esegui){
+		ros::spinOnce();
+		if(loop) break;
+	}
+	loop=false;
+	}
+	
 	return 0;
 
 
 }
-
 

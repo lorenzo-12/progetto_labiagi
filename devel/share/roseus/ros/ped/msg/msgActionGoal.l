@@ -1,0 +1,1 @@
+/home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgActionGoal.l

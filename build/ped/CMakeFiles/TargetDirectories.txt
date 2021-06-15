@@ -14,6 +14,7 @@
 /home/me/progetto_labiagi/build/ped/CMakeFiles/tests.dir
 /home/me/progetto_labiagi/build/ped/CMakeFiles/rebuild_cache.dir
 /home/me/progetto_labiagi/build/ped/CMakeFiles/roscpp_generate_messages_cpp.dir
+/home/me/progetto_labiagi/build/ped/CMakeFiles/ped_status.dir
 /home/me/progetto_labiagi/build/ped/CMakeFiles/download_extra_data.dir
 /home/me/progetto_labiagi/build/ped/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/me/progetto_labiagi/build/ped/CMakeFiles/std_msgs_generate_messages_eus.dir
