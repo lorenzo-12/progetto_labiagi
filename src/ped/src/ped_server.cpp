@@ -125,27 +125,39 @@ void stato_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& status){
 		}
 		completamento=(dist_max-status->distance_to_global_goal)*100/dist_max;
 		cout << "\rstatus distance: ";
-		cout << red;
+		cout << lightblue;
 		cout << fixed << setprecision(4) << status->distance_to_global_goal << flush;
 		cout << fine;
 		cout << " completamento: " << flush;
-		cout << fixed << setprecision(4) << completamento << "%" << flush;
-		cout << "  [" << flush;
+		if(completamento<33) cout << red;
+		else if(completamento<70) cout << yellow;
+		else if(completamento>=70) cout << green;
+		cout << fixed << setprecision(4) << completamento << "% " << flush;
+		cout << fine;
 		for(int aux=0; aux<30; aux++){
+			if(completamento<33) cout << red;
+			else if(completamento<70) cout << yellow;
+			else if(completamento>=70) cout << green;
+			if(aux==0) cout << "  [" << flush;
 			if(aux<0.3*completamento) cout << "#" << flush;
 			else cout << "." << flush;
+			cout << fine;
 		}
 		cout << "]  " << flush;
 		v.insert(v.begin()+k%4,status->distance_to_global_goal);
 	}
 	if(v.at(0)==v.at(1) and v.at(1)==v.at(2) and v.at(2)==v.at(3) and ok){
 		cout << "\rstatus distance: ";
-		cout << red;
+		cout << lightblue;
 		cout << fixed << setprecision(4) << status->distance_to_global_goal << flush;
 		cout << fine;
 		cout << " completamento: " << flush;
+		cout << green;
 		cout << "100%" << flush;
+		cout << fine;
+		cout << green;
 		cout << "   [#############################]  " << flush;
+		cout << fine;
 		cout << endl << flush;
 		aspetta=true;
 		dist_max=0;
