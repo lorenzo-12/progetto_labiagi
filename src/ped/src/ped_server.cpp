@@ -28,8 +28,8 @@ vector<float> v = {1,2,3,4};
 
 
 void CB(const std_msgs::String::ConstPtr& msg){
-	cout << "ho sentito: " << msg->data.c_str() << endl << flush;
-	cout << "p: " << p << "   d: " << d << endl << flush;
+	//cout << "ho sentito: " << msg->data.c_str() << endl << flush;
+	//cout << "p: " << p << "   d: " << d << endl << flush;
 	if(p){
 		s=msg->data;
 		boost::split(result, s, boost::is_any_of(" "));
@@ -49,9 +49,9 @@ void CB(const std_msgs::String::ConstPtr& msg){
 			ros::spinOnce();
 		}
 		
-		cout << red;
-		cout << "fine ciclo while" << endl << flush;
-		cout << fine;
+		//cout << red;
+		//cout << "fine ciclo while" << endl << flush;
+		//cout << fine;
 		
 		m.data="pick";
 		talk.publish(m);
@@ -80,9 +80,9 @@ void CB(const std_msgs::String::ConstPtr& msg){
 			if(aspetta) break;
 			ros::spinOnce();
 		}
-		cout << red;
-		cout << "fine ciclo while" << endl << flush;
-		cout << fine;
+		//cout << red;
+		//cout << "fine ciclo while" << endl << flush;
+		//cout << fine;
 		
 		m.data="delivery";
 		talk.publish(m);
@@ -97,31 +97,35 @@ void CB(const std_msgs::String::ConstPtr& msg){
 		m.data="opzioni";
 		talk.publish(m);
 		ros::spinOnce();
-		cout << "ho mandato: " << m.data.c_str() << endl << flush;
+		//cout << "ho mandato: " << m.data.c_str() << endl << flush;
 	}
 	else if(msg->data=="pick"){
-		cout << "pick" << endl << flush;
+		//cout << "pick" << endl << flush;
 		p=true;
 	}
 	else if(msg->data=="delivery"){
-		cout << "delivery" << endl << flush;
+		//cout << "delivery" << endl << flush;
 		d=true;
 	}
 	else{
 		m.data=msg->data;
 		talk.publish(m);
 		ros::spinOnce();
-		cout << "ho mandato: " << m.data.c_str() << endl << flush; 
+		//cout << "ho mandato: " << m.data.c_str() << endl << flush; 
 	}
 }
 
 void stato_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& status){
 	k++;
 	if(ok){
-		cout << "status distance: " << status->distance_to_global_goal << "\r"<< flush;
+		cout << "\rstatus distance: ";
+		cout << red;
+		cout << status->distance_to_global_goal << flush;
+		cout << fine;
 		v.insert(v.begin()+k%4,status->distance_to_global_goal);
 	}
 	if(v.at(0)==v.at(1) and v.at(1)==v.at(2) and v.at(2)==v.at(3) and ok){
+		cout << endl << flush;
 		aspetta=true;
 		v = {1,2,3,4};
 	}

@@ -35,7 +35,7 @@ void stampa_opzioni(){
 }
 
 void CB(const std_msgs::String::ConstPtr& msg){
-	cout << "ho sentito: " << msg->data.c_str() << endl << flush;
+	//cout << "ho sentito: " << msg->data.c_str() << endl << flush;
 	r=msg->data;
 	if(msg->data=="opzioni") stampa_opzioni();
 	if(msg->data=="pick") aspetta=true;
@@ -50,10 +50,17 @@ int main(int argc, char** argv){
 	
 	ros::Publisher talk = n.advertise<std_msgs::String>("/ped_cts",1000);
 	ros::Subscriber listener = n.subscribe("/ped_stc",1000,CB);
+	stampa_opzioni();
 	
 	while(ros::ok()){	
-	cout << "digita qualcosa: " << flush; cin >> s;
+	cout << "scegli un'opzione: " << flush; cin >> s;
 	esegui=true;
+	
+	if(s=="clear"){
+		system("clear");
+		stampa_opzioni();
+	}
+	
 	if(s=="0") return 0;
 	
 	if(s=="1" and esegui){
@@ -101,7 +108,19 @@ int main(int argc, char** argv){
 	}
 	if(s=="3" and esegui){
 		while(!esiste){	
-			cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
+			cout << "INSERIRE L'UTENTE DA CUI PRENDERE IL PACCO: "; cin >> username;
+			if(username=="utenti?"){
+				cout << orange;
+				cout << "LISTA UTENTI:" << endl << flush;
+				cout << fine;
+				for(auto k : list_user){
+					cout << k.name << " " << k.x << " " << k.y << endl << flush;
+				}
+				cout << orange;
+				cout << "---" << endl << flush;
+				cout << fine;
+				esegui=false;
+			}
 			for( auto k : list_user){
 				if(k.name==username){
 					pos_x=k.x;
@@ -112,12 +131,11 @@ int main(int argc, char** argv){
 			}
 			if(esiste==false){
 				cout << "L'UTENTE INSERITO NON ESISTE NEL DATABASE, SI PREGA DI RIPROVARE." << endl << flush;
-				cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
 			}
 		}
 		esiste=false;
 		
-		cout << username << pos_x << pos_y << endl << flush;
+		//cout << username << pos_x << pos_y << endl << flush;
 		msg.data="pick";
 		talk.publish(msg);
 		ros::spinOnce();
@@ -128,8 +146,8 @@ int main(int argc, char** argv){
 		talk.publish(msg);
 		ros::spinOnce();
 		
-		cout << red;
-		cout << "inizio ad aspettare" << endl << flush;
+		cout << lightblue;
+		cout << "IL ROBOT È IN MOVIMENTO" << endl << flush;
 		cout << fine;
 		
 		while(ros::ok()){
@@ -137,12 +155,23 @@ int main(int argc, char** argv){
 			ros::spinOnce();
 		}
 		
-		cout << red;
-		cout << "ho finto di apsettare" << endl << flush;
+		cout << lightblue;
+		cout << "\rIL ROBOT È ARRIVATO A DESTINAZIONE" << endl << flush;
 		cout << fine;
 		
 		while(!esiste){	
 			cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
+			if(username=="utenti?"){
+				cout << orange;
+				cout << "LISTA UTENTI:" << endl << flush;
+				cout << fine;
+				for(auto k : list_user){
+					cout << k.name << " " << k.x << " " << k.y << endl << flush;
+				}
+				cout << orange;
+				cout << "---" << endl << flush;
+				cout << fine;
+			}
 			for( auto k : list_user){
 				if(k.name==username){
 					pos_x=k.x;
@@ -153,11 +182,10 @@ int main(int argc, char** argv){
 			}
 			if(esiste==false){
 				cout << "L'UTENTE INSERITO NON ESISTE NEL DATABASE, SI PREGA DI RIPROVARE." << endl << flush;
-				cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
 			}
 		}
 		esiste=false;
-		cout << username << pos_x << pos_y << endl << flush;
+		//cout << username << pos_x << pos_y << endl << flush;
 		msg.data="delivery";
 		talk.publish(msg);
 		ros::spinOnce();
@@ -171,8 +199,8 @@ int main(int argc, char** argv){
 		aspetta=false;
 		esegui=false;
 		
-		cout << red;
-		cout << "inizio ad aspettare" << endl << flush;
+		cout << lightblue;
+		cout << "IL ROBOT È IN MOVIMENTO" << endl << flush;
 		cout << fine;
 		
 		while(ros::ok()){
@@ -180,14 +208,16 @@ int main(int argc, char** argv){
 			ros::spinOnce();
 		}
 		
-		cout << red;
-		cout << "ho finto di apsettare" << endl << flush;
+		cout << lightblue;
+		cout << "\rIL ROBOT È ARRIVATO A DESTINAZIONE" << endl << flush;
 		cout << fine;
 		
 		aspetta=false;
+		stampa_opzioni();
 		
 	}
 	if(s=="4" and esegui){
+		system("clear");
 		cout << orange;
 		cout << "LISTA UTENTI:" << endl << flush;
 		cout << fine;
@@ -198,7 +228,6 @@ int main(int argc, char** argv){
 		cout << "---" << endl << flush;
 		cout << fine;
 		stampa_opzioni();
-		esegui=false;
 	}
 	if(esegui){
 		msg.data=s;
