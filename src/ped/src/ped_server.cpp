@@ -24,6 +24,8 @@ vector<string> result;
 ros::Publisher pub_goal;
 ros::Subscriber pub_status;
 vector<float> v = {1,2,3,4};
+float dist_max=0;
+int completamento=0;
 
 
 
@@ -118,15 +120,35 @@ void CB(const std_msgs::String::ConstPtr& msg){
 void stato_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& status){
 	k++;
 	if(ok){
+		if(status->distance_to_global_goal>dist_max){
+			dist_max=status->distance_to_global_goal;
+		}
+		completamento=(dist_max-status->distance_to_global_goal)*100/dist_max;
 		cout << "\rstatus distance: ";
 		cout << red;
-		cout << status->distance_to_global_goal << flush;
+		cout << fixed << setprecision(4) << status->distance_to_global_goal << flush;
 		cout << fine;
+		cout << " completamento: " << flush;
+		cout << fixed << setprecision(4) << completamento << "%" << flush;
+		cout << "  [" << flush;
+		for(int aux=0; aux<30; aux++){
+			if(aux<0.3*completamento) cout << "#" << flush;
+			else cout << "." << flush;
+		}
+		cout << "]  " << flush;
 		v.insert(v.begin()+k%4,status->distance_to_global_goal);
 	}
 	if(v.at(0)==v.at(1) and v.at(1)==v.at(2) and v.at(2)==v.at(3) and ok){
+		cout << "\rstatus distance: ";
+		cout << red;
+		cout << fixed << setprecision(4) << status->distance_to_global_goal << flush;
+		cout << fine;
+		cout << " completamento: " << flush;
+		cout << "100%" << flush;
+		cout << "   [#############################]  " << flush;
 		cout << endl << flush;
 		aspetta=true;
+		dist_max=0;
 		v = {1,2,3,4};
 	}
 	return;

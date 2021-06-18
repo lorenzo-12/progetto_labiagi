@@ -147,7 +147,7 @@ int main(int argc, char** argv){
 		ros::spinOnce();
 		
 		cout << lightblue;
-		cout << "IL ROBOT È IN MOVIMENTO" << endl << flush;
+		cout << "IL ROBOT È IN MOVIMENTO" << flush;
 		cout << fine;
 		
 		while(ros::ok()){
@@ -200,7 +200,7 @@ int main(int argc, char** argv){
 		esegui=false;
 		
 		cout << lightblue;
-		cout << "IL ROBOT È IN MOVIMENTO" << endl << flush;
+		cout << "IL ROBOT È IN MOVIMENTO" << flush;
 		cout << fine;
 		
 		while(ros::ok()){

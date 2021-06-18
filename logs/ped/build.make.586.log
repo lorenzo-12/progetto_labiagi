@@ -1,0 +1,27 @@
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _ped_generate_messages_check_deps_set_user
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _ped_generate_messages_check_deps_User
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[ 15%] Built target ped_generate_messages_eus
+[ 36%] Built target ped_generate_messages_py
+[ 47%] Built target ped_generate_messages_lisp
+[ 57%] Built target ped_generate_messages_cpp
+[ 68%] Built target ped_generate_messages_nodejs
+[35m[1mScanning dependencies of target ped_server[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/ped_server.dir/src/ped_server.cpp.o[0m
+[ 84%] Built target ped_status
+[ 94%] Built target ped_client
+[ 94%] Built target ped_generate_messages
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kvoid stato_robot(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:132:56:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K<<[m[K’ token
+   cout << fixed << setprecision(4) << completamento << [01;31m[K<<[m[K "%" << flush;
+                                                        [01;31m[K^~[m[K
+CMakeFiles/ped_server.dir/build.make:62: recipe for target 'CMakeFiles/ped_server.dir/src/ped_server.cpp.o' failed
+CMakeFiles/Makefile2:112: recipe for target 'CMakeFiles/ped_server.dir/all' failed
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2
+Makefile:140: recipe for target 'all' failed

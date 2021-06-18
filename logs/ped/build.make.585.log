@@ -1,19 +1,19 @@
 [  0%] Built target std_msgs_generate_messages_eus
-[  0%] Built target _ped_generate_messages_check_deps_User
 [  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target _ped_generate_messages_check_deps_set_user
+[  0%] Built target _ped_generate_messages_check_deps_User
 [  0%] Built target std_msgs_generate_messages_lisp
-[  0%] Built target std_msgs_generate_messages_nodejs
 [  0%] Built target std_msgs_generate_messages_cpp
-[ 10%] Built target ped_generate_messages_lisp
-[ 26%] Built target ped_generate_messages_eus
-[ 47%] Built target ped_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[ 15%] Built target ped_generate_messages_eus
+[ 36%] Built target ped_generate_messages_py
+[ 47%] Built target ped_generate_messages_lisp
 [ 57%] Built target ped_generate_messages_nodejs
 [ 68%] Built target ped_generate_messages_cpp
 [35m[1mScanning dependencies of target ped_server[0m
-[ 78%] Built target ped_client
-[ 89%] Built target ped_status
+[ 78%] Built target ped_status
+[ 89%] Built target ped_client
+[ 89%] Built target ped_generate_messages
 [ 94%] [32mBuilding CXX object CMakeFiles/ped_server.dir/src/ped_server.cpp.o[0m
-[ 94%] Built target ped_generate_messages
 [100%] [32m[1mLinking CXX executable /home/me/progetto_labiagi/devel/.private/ped/lib/ped/ped_server[0m
 [100%] Built target ped_server
