@@ -61,18 +61,31 @@ int main(int argc, char** argv){
 	ros::Publisher talk = n.advertise<std_msgs::String>("/ped_cts",1000);
 	ros::Subscriber listener = n.subscribe("/ped_stc",1000,CB);
 	
-	int count=0;
+	
+	/*	NON SO PER QUALE MOTIVO MA NON INVIA QUESTI MESSAGGI, HO PROVATO ANCHE A METTERE ROS::SPINONCE() PRIMA MA NULLA.
+		HO PROVATO ANCHE A FARE 10 PUBLISH DI FILA MA NULLA. PERÒ SE METTO UNA SLEEP E POI FACCIO UN PUBLISH ALLORA FUNZIONA
+		NON SO PERCHÈ. QUINDI SONO COSTRETTO A METTERE IL WHILE
+	
+	msg.data="psw";
+	talk.publish(msg);
+	ros::spinOnce();
+	
+	*/
+	
+	
+	//per ottenere la password dal server invio un messaggio "psw" e aspetto dal server che risponda con 2 messaggi: il primo
+	// deve essere "psw" e il secondo deve contenere la password. ho dovuto fare un ciclo while per i motivi sopra descritti
 	while(ros::ok()){
-		//cout << count << endl << flush;
 		msg.data="psw";
 		talk.publish(msg);
 		ros::spinOnce();
+		
+		//una volta ottenuta la password si pone la variabile "psw_exit"=true in modo da uscire dal ciclo.
 		if(psw_exit) break;
 		ros::Duration(1,0).sleep();
-		count++;
 	}
-	//cout << "---" << password << "---" << endl << flush;
 	
+	//per procedere oltre si chiede di inserire la password
 	cout << "PER CONTINUARE DIGITA LA PASSWORD: "; cin >> psw_tmp;
 	while(psw_tmp!=password){
 		cout << "PASSWORD ERRATA. DIGITA LA PASSWORD: "; cin >> psw_tmp;
@@ -80,19 +93,23 @@ int main(int argc, char** argv){
 	
 	stampa_opzioni();
 	
+	//ciclo while principale
+	
 	while(ros::ok()){
 	cout << "scegli un'opzione: " << flush; cin >> s;
 	esegui=true;
 	
+	//funzione per fare una clear del terminale in modo da rimuove vecchi messaggi
 	if(s=="clear"){
 		system("clear");
 		stampa_opzioni();
 	}
 	
+	//0 per terminare
 	if(s=="0") return 0;
 	
+	//1 per inserire gli utenti
 	if(s=="1" and esegui){
-		///if(wrong_psw){
 		cout << "USERNAME: "; cin >> username;
 		cout << "POSITION X: "; cin >> pos_x;
 		cout << "POSITION Y: "; cin >> pos_y;
@@ -116,11 +133,13 @@ int main(int argc, char** argv){
 			cout << "UTENTE AGGIUNTO CORRETTAMENTE" << endl << flush;
 			cout << fine;  
 		}
-		///}
+		
 		system("clear");
 		stampa_opzioni();
 		esegui=false;
 	}
+	
+	//2 per eliminare un utente (se esiste, altriemnti non fa nulla)
 	if(s=="2" and esegui){
 		cout << "USERNAME: "; cin >> username;
 		for(auto k : list_user){
@@ -136,7 +155,11 @@ int main(int argc, char** argv){
 		stampa_opzioni();
 		esegui=false;
 	}
+	
+	//3 per effettuare il pick and delivery
 	if(s=="3" and esegui){ 
+		
+		//si chiede in input il nome di un utente finchè non ne viene inserito uno valido.
 		while(!esiste){	
 			cout << "INSERIRE L'UTENTE DA CUI PRENDERE IL PACCO: "; cin >> username;
 			if(username=="utenti?"){
@@ -165,6 +188,9 @@ int main(int argc, char** argv){
 		}
 		esiste=false;
 		
+		//si inviano al server 2 messaggi: il primo è "pick" per far capire al server che si intede prendere il pacco
+		//il secondo contiene i dati necessari per impostare il prossimo goal (messaggio che verrà mandato dal server)
+		
 		//cout << username << pos_x << pos_y << endl << flush;
 		msg.data="pick";
 		talk.publish(msg);
@@ -180,6 +206,11 @@ int main(int argc, char** argv){
 		cout << "IL ROBOT È IN MOVIMENTO" << flush;
 		cout << fine;
 		
+		//si aspetta fino a quando il robot non è arrivato a destinazine
+		//ho dovuto usare un while poichè metodi come "ros::topic::waitForMessage<std_msgs::String>("/stato_robot",ros::Duration(120));"
+		//per qualche motivo non funzionano, (infatti anche all'inizio del file si è dovuto optare per un ciclo while)
+		//poichè ros non invia i messaggi
+		
 		while(ros::ok()){
 			if(aspetta) break;
 			ros::spinOnce();
@@ -189,6 +220,7 @@ int main(int argc, char** argv){
 		cout << "\rIL ROBOT È ARRIVATO A DESTINAZIONE" << endl << flush;
 		cout << fine;
 		
+		//si chiede in input il nome di un utente finchè non ne viene inserito uno valido.
 		while(!esiste){	
 			cout << "INSERIRE L'UTENTE A CUI SI INTENDE SPEDIRE IL PACCO: "; cin >> username;
 			if(username=="utenti?"){
@@ -215,6 +247,10 @@ int main(int argc, char** argv){
 			}
 		}
 		esiste=false;
+		
+		//vengono mandati al server 2 messaggi: il primo è "delivery" per far capire al server che si intede spedire il pacco
+		//il secondo contiene i dati necessari per impostare il prossimo goal (messaggio che verrà mandato dal server)
+		
 		//cout << username << pos_x << pos_y << endl << flush;
 		msg.data="delivery";
 		talk.publish(msg);
@@ -233,6 +269,8 @@ int main(int argc, char** argv){
 		cout << "IL ROBOT È IN MOVIMENTO" << flush;
 		cout << fine;
 		
+		//come prima si aspetta che il robot arrivi a destinazione
+		
 		while(ros::ok()){
 			if(aspetta) break;
 			ros::spinOnce();
@@ -246,6 +284,8 @@ int main(int argc, char** argv){
 		stampa_opzioni();
 		
 	}
+	
+	//4 per stampare la lista di utenti registrati
 	if(s=="4" and esegui){
 		system("clear");
 		cout << orange;
