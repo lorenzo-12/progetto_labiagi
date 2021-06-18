@@ -17,6 +17,10 @@ float pos_y;
 bool esegui=true;
 bool esiste=false;
 stringstream ss;
+string password="";
+string psw_tmp="";
+bool psw_exit=false;
+bool psw_wait=false;
 
 void stampa_opzioni(){
 	cout << "COMANDI DISPONIBILI (0 PER TERMINARE):" << endl;
@@ -37,6 +41,12 @@ void stampa_opzioni(){
 void CB(const std_msgs::String::ConstPtr& msg){
 	//cout << "ho sentito: " << msg->data.c_str() << endl << flush;
 	r=msg->data;
+	if(psw_wait==true){
+		password=msg->data;
+		psw_wait=false;
+		psw_exit=true;
+	}
+	if(msg->data=="psw") psw_wait=true;
 	if(msg->data=="opzioni") stampa_opzioni();
 	if(msg->data=="pick") aspetta=true;
 	if(msg->data=="delivery") aspetta=true;
@@ -50,9 +60,27 @@ int main(int argc, char** argv){
 	
 	ros::Publisher talk = n.advertise<std_msgs::String>("/ped_cts",1000);
 	ros::Subscriber listener = n.subscribe("/ped_stc",1000,CB);
+	
+	int count=0;
+	while(ros::ok()){
+		//cout << count << endl << flush;
+		msg.data="psw";
+		talk.publish(msg);
+		ros::spinOnce();
+		if(psw_exit) break;
+		ros::Duration(1,0).sleep();
+		count++;
+	}
+	//cout << "---" << password << "---" << endl << flush;
+	
+	cout << "PER CONTINUARE DIGITA LA PASSWORD: "; cin >> psw_tmp;
+	while(psw_tmp!=password){
+		cout << "PASSWORD ERRATA. DIGITA LA PASSWORD: "; cin >> psw_tmp;
+	}
+	
 	stampa_opzioni();
 	
-	while(ros::ok()){	
+	while(ros::ok()){
 	cout << "scegli un'opzione: " << flush; cin >> s;
 	esegui=true;
 	
@@ -64,6 +92,7 @@ int main(int argc, char** argv){
 	if(s=="0") return 0;
 	
 	if(s=="1" and esegui){
+		///if(wrong_psw){
 		cout << "USERNAME: "; cin >> username;
 		cout << "POSITION X: "; cin >> pos_x;
 		cout << "POSITION Y: "; cin >> pos_y;
@@ -87,6 +116,7 @@ int main(int argc, char** argv){
 			cout << "UTENTE AGGIUNTO CORRETTAMENTE" << endl << flush;
 			cout << fine;  
 		}
+		///}
 		system("clear");
 		stampa_opzioni();
 		esegui=false;
@@ -106,7 +136,7 @@ int main(int argc, char** argv){
 		stampa_opzioni();
 		esegui=false;
 	}
-	if(s=="3" and esegui){
+	if(s=="3" and esegui){ 
 		while(!esiste){	
 			cout << "INSERIRE L'UTENTE DA CUI PRENDERE IL PACCO: "; cin >> username;
 			if(username=="utenti?"){

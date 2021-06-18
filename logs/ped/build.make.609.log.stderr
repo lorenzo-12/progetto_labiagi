@@ -1,0 +1,11 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kvoid CB(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:108:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kenld[m[K’ was not declared in this scope
+   cout << "invio la password" << [01;31m[Kenld[m[K << flush;
+                                  [01;31m[K^~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:108:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kynl[m[K’
+   cout << "invio la password" << [01;36m[Kenld[m[K << flush;
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kynl[m[K
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2
