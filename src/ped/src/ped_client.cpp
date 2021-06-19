@@ -23,6 +23,12 @@ bool psw_exit=false;
 bool psw_wait=false;
 
 void stampa_opzioni(){
+	
+	cout << red;
+	cout << "aaaaaaaaaaaaaaaaaa" << endl << flush;
+	cout << fine;
+	
+	
 	cout << "COMANDI DISPONIBILI (0 PER TERMINARE):" << endl;
 	cout << red;
 	cout << "  1- INSERIMENTO/MODIFICA UTENTE NEL DATABASE" << endl;
