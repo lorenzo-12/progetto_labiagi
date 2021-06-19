@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "ped: 1 messages, 1 services")
+message(STATUS "ped: 1 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iped:/home/me/progetto_labiagi/src/ped/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -22,11 +22,6 @@ add_custom_target(_ped_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ped" "/home/me/progetto_labiagi/src/ped/msg/User.msg" ""
 )
 
-get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/srv/set_user.srv" NAME_WE)
-add_custom_target(_ped_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ped" "/home/me/progetto_labiagi/src/ped/srv/set_user.srv" ""
-)
-
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -41,12 +36,6 @@ _generate_msg_cpp(ped
 )
 
 ### Generating Services
-_generate_srv_cpp(ped
-  "/home/me/progetto_labiagi/src/ped/srv/set_user.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ped
-)
 
 ### Generating Module File
 _generate_module_cpp(ped
@@ -61,8 +50,6 @@ add_dependencies(ped_generate_messages ped_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/msg/User.msg" NAME_WE)
-add_dependencies(ped_generate_messages_cpp _ped_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/srv/set_user.srv" NAME_WE)
 add_dependencies(ped_generate_messages_cpp _ped_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -82,12 +69,6 @@ _generate_msg_eus(ped
 )
 
 ### Generating Services
-_generate_srv_eus(ped
-  "/home/me/progetto_labiagi/src/ped/srv/set_user.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ped
-)
 
 ### Generating Module File
 _generate_module_eus(ped
@@ -102,8 +83,6 @@ add_dependencies(ped_generate_messages ped_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/msg/User.msg" NAME_WE)
-add_dependencies(ped_generate_messages_eus _ped_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/srv/set_user.srv" NAME_WE)
 add_dependencies(ped_generate_messages_eus _ped_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -123,12 +102,6 @@ _generate_msg_lisp(ped
 )
 
 ### Generating Services
-_generate_srv_lisp(ped
-  "/home/me/progetto_labiagi/src/ped/srv/set_user.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ped
-)
 
 ### Generating Module File
 _generate_module_lisp(ped
@@ -143,8 +116,6 @@ add_dependencies(ped_generate_messages ped_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/msg/User.msg" NAME_WE)
-add_dependencies(ped_generate_messages_lisp _ped_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/srv/set_user.srv" NAME_WE)
 add_dependencies(ped_generate_messages_lisp _ped_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -164,12 +135,6 @@ _generate_msg_nodejs(ped
 )
 
 ### Generating Services
-_generate_srv_nodejs(ped
-  "/home/me/progetto_labiagi/src/ped/srv/set_user.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ped
-)
 
 ### Generating Module File
 _generate_module_nodejs(ped
@@ -184,8 +149,6 @@ add_dependencies(ped_generate_messages ped_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/msg/User.msg" NAME_WE)
-add_dependencies(ped_generate_messages_nodejs _ped_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/srv/set_user.srv" NAME_WE)
 add_dependencies(ped_generate_messages_nodejs _ped_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -205,12 +168,6 @@ _generate_msg_py(ped
 )
 
 ### Generating Services
-_generate_srv_py(ped
-  "/home/me/progetto_labiagi/src/ped/srv/set_user.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ped
-)
 
 ### Generating Module File
 _generate_module_py(ped
@@ -225,8 +182,6 @@ add_dependencies(ped_generate_messages ped_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/msg/User.msg" NAME_WE)
-add_dependencies(ped_generate_messages_py _ped_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/ped/srv/set_user.srv" NAME_WE)
 add_dependencies(ped_generate_messages_py _ped_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

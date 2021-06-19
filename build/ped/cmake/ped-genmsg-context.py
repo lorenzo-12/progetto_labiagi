@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/me/progetto_labiagi/src/ped/msg/User.msg"
-services_str = "/home/me/progetto_labiagi/src/ped/srv/set_user.srv"
+services_str = ""
 pkg_name = "ped"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

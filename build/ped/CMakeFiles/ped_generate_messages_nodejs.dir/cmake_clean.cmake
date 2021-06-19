@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ped_generate_messages_nodejs"
   "/home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/User.js"
-  "/home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/srv/set_user.js"
 )
 
 # Per-language clean rules from dependency scanning.

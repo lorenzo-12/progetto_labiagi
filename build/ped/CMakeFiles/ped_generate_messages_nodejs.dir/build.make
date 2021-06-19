@@ -54,7 +54,6 @@ CMAKE_BINARY_DIR = /home/me/progetto_labiagi/build/ped
 include CMakeFiles/ped_generate_messages_nodejs.dir/progress.make
 
 CMakeFiles/ped_generate_messages_nodejs: /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/User.js
-CMakeFiles/ped_generate_messages_nodejs: /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/srv/set_user.js
 
 
 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/User.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
@@ -62,14 +61,8 @@ CMakeFiles/ped_generate_messages_nodejs: /home/me/progetto_labiagi/devel/.privat
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ped/User.msg"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/me/progetto_labiagi/src/ped/msg/User.msg -Iped:/home/me/progetto_labiagi/src/ped/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ped -o /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg
 
-/home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/srv/set_user.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/srv/set_user.js: /home/me/progetto_labiagi/src/ped/srv/set_user.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from ped/set_user.srv"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/me/progetto_labiagi/src/ped/srv/set_user.srv -Iped:/home/me/progetto_labiagi/src/ped/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ped -o /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/srv
-
 ped_generate_messages_nodejs: CMakeFiles/ped_generate_messages_nodejs
 ped_generate_messages_nodejs: /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/User.js
-ped_generate_messages_nodejs: /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/srv/set_user.js
 ped_generate_messages_nodejs: CMakeFiles/ped_generate_messages_nodejs.dir/build.make
 
 .PHONY : ped_generate_messages_nodejs

@@ -29,10 +29,10 @@ find_package(catkin REQUIRED COMPONENTS
  )
 
 ## Generate services in the 'srv' folder
- add_service_files(
-   FILES
-   set_user.srv
- )
+# add_service_files(
+#   FILES
+#   set_user.srv
+# )
 
 ## Generate actions in the 'action' folder
 #add_action_files(
@@ -70,6 +70,6 @@ add_executable(ped_client src/ped_client.cpp)
 target_link_libraries(ped_client ${catkin_LIBRARIES})
 add_dependencies(ped_client ${ped_EXPORTED_TARGETS})
 
-add_executable(ped_status src/ped_status.cpp)
-target_link_libraries(ped_status ${catkin_LIBRARIES})
-add_dependencies(ped_status ${ped_EXPORTED_TARGETS})
+#add_executable(ped_status src/ped_status.cpp)
+#target_link_libraries(ped_status ${catkin_LIBRARIES})
+#add_dependencies(ped_status ${ped_EXPORTED_TARGETS})

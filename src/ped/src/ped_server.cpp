@@ -167,7 +167,7 @@ void stato_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& status){
 		
 		//mi calcolo a che percentuale del cammino totale si trova il robot
 		completamento=(dist_max-status->distance_to_global_goal)*100/dist_max;
-		
+		if(completamento<0) completamento=0;
 		//stampo la distanza a cui si trova dal goal e la percuntale del completamento del cammino
 		cout << "\rstatus distance: ";
 		cout << lightblue;

@@ -298,19 +298,6 @@ roscpp_generate_messages_cpp/fast:
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ped_status
-
-# Build rule for target.
-ped_status: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_status
-.PHONY : ped_status
-
-# fast build rule for target.
-ped_status/fast:
-	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/build
-.PHONY : ped_status/fast
-
-#=============================================================================
 # Target rules for targets named download_extra_data
 
 # Build rule for target.
@@ -454,30 +441,30 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named ped_gennodejs
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
 
 # Build rule for target.
-ped_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_gennodejs
-.PHONY : ped_gennodejs
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-ped_gennodejs/fast:
-	$(MAKE) -f CMakeFiles/ped_gennodejs.dir/build.make CMakeFiles/ped_gennodejs.dir/build
-.PHONY : ped_gennodejs/fast
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named doxygen
+# Target rules for targets named clean_test_results
 
 # Build rule for target.
-doxygen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 doxygen
-.PHONY : doxygen
+clean_test_results: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results
+.PHONY : clean_test_results
 
 # fast build rule for target.
-doxygen/fast:
-	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-.PHONY : doxygen/fast
+clean_test_results/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
+.PHONY : clean_test_results/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
@@ -610,6 +597,32 @@ ped_generate_messages_nodejs/fast:
 .PHONY : ped_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named doxygen
+
+# Build rule for target.
+doxygen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doxygen
+.PHONY : doxygen
+
+# fast build rule for target.
+doxygen/fast:
+	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
+
+#=============================================================================
+# Target rules for targets named ped_gennodejs
+
+# Build rule for target.
+ped_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_gennodejs
+.PHONY : ped_gennodejs
+
+# fast build rule for target.
+ped_gennodejs/fast:
+	$(MAKE) -f CMakeFiles/ped_gennodejs.dir/build.make CMakeFiles/ped_gennodejs.dir/build
+.PHONY : ped_gennodejs/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -634,45 +647,6 @@ _ped_generate_messages_check_deps_User: cmake_check_build_system
 _ped_generate_messages_check_deps_User/fast:
 	$(MAKE) -f CMakeFiles/_ped_generate_messages_check_deps_User.dir/build.make CMakeFiles/_ped_generate_messages_check_deps_User.dir/build
 .PHONY : _ped_generate_messages_check_deps_User/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_nodejs
-
-# Build rule for target.
-geometry_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named clean_test_results
-
-# Build rule for target.
-clean_test_results: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results
-.PHONY : clean_test_results
-
-# fast build rule for target.
-clean_test_results/fast:
-	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-.PHONY : clean_test_results/fast
-
-#=============================================================================
-# Target rules for targets named _ped_generate_messages_check_deps_set_user
-
-# Build rule for target.
-_ped_generate_messages_check_deps_set_user: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _ped_generate_messages_check_deps_set_user
-.PHONY : _ped_generate_messages_check_deps_set_user
-
-# fast build rule for target.
-_ped_generate_messages_check_deps_set_user/fast:
-	$(MAKE) -f CMakeFiles/_ped_generate_messages_check_deps_set_user.dir/build.make CMakeFiles/_ped_generate_messages_check_deps_set_user.dir/build
-.PHONY : _ped_generate_messages_check_deps_set_user/fast
 
 #=============================================================================
 # Target rules for targets named run_tests
@@ -819,33 +793,6 @@ src/ped_server.cpp.s:
 	$(MAKE) -f CMakeFiles/ped_server.dir/build.make CMakeFiles/ped_server.dir/src/ped_server.cpp.s
 .PHONY : src/ped_server.cpp.s
 
-src/ped_status.o: src/ped_status.cpp.o
-
-.PHONY : src/ped_status.o
-
-# target to build an object file
-src/ped_status.cpp.o:
-	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/src/ped_status.cpp.o
-.PHONY : src/ped_status.cpp.o
-
-src/ped_status.i: src/ped_status.cpp.i
-
-.PHONY : src/ped_status.i
-
-# target to preprocess a source file
-src/ped_status.cpp.i:
-	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/src/ped_status.cpp.i
-.PHONY : src/ped_status.cpp.i
-
-src/ped_status.s: src/ped_status.cpp.s
-
-.PHONY : src/ped_status.s
-
-# target to generate assembly for a file
-src/ped_status.cpp.s:
-	$(MAKE) -f CMakeFiles/ped_status.dir/build.make CMakeFiles/ped_status.dir/src/ped_status.cpp.s
-.PHONY : src/ped_status.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -868,7 +815,6 @@ help:
 	@echo "... tests"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
-	@echo "... ped_status"
 	@echo "... download_extra_data"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"
@@ -880,9 +826,8 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... ped_generate_messages"
 	@echo "... roscpp_generate_messages_lisp"
-	@echo "... install/local"
-	@echo "... ped_gennodejs"
-	@echo "... doxygen"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... clean_test_results"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
@@ -893,11 +838,11 @@ help:
 	@echo "... ped_geneus"
 	@echo "... ped_genlisp"
 	@echo "... ped_generate_messages_nodejs"
+	@echo "... install/local"
+	@echo "... doxygen"
+	@echo "... ped_gennodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _ped_generate_messages_check_deps_User"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... clean_test_results"
-	@echo "... _ped_generate_messages_check_deps_set_user"
 	@echo "... run_tests"
 	@echo "... ped_generate_messages_cpp"
 	@echo "... ped_generate_messages_eus"
@@ -911,9 +856,6 @@ help:
 	@echo "... src/ped_server.o"
 	@echo "... src/ped_server.i"
 	@echo "... src/ped_server.s"
-	@echo "... src/ped_status.o"
-	@echo "... src/ped_status.i"
-	@echo "... src/ped_status.s"
 .PHONY : help
 
 
