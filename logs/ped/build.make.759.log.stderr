@@ -1,0 +1,10 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kvoid CB(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:99:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kx[m[K’ was not declared in this scope
+    cout << [01;31m[Kx[m[K << " " << y << endl;
+            [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:99:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ was not declared in this scope
+    cout << x << " " << [01;31m[Ky[m[K << endl;
+                        [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2

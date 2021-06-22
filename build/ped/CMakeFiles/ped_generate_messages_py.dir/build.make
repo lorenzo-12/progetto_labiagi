@@ -53,28 +53,28 @@ CMAKE_BINARY_DIR = /home/me/progetto_labiagi/build/ped
 # Include the progress variables for this target.
 include CMakeFiles/ped_generate_messages_py.dir/progress.make
 
-CMakeFiles/ped_generate_messages_py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py
+CMakeFiles/ped_generate_messages_py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py
 CMakeFiles/ped_generate_messages_py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py
 CMakeFiles/ped_generate_messages_py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/__init__.py
 
 
-/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py: /home/me/progetto_labiagi/src/ped/msg/User.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG ped/User"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/me/progetto_labiagi/src/ped/msg/User.msg -Iped:/home/me/progetto_labiagi/src/ped/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ped -o /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg
+/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py: /home/me/progetto_labiagi/src/ped/msg/utenti.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG ped/utenti"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/me/progetto_labiagi/src/ped/msg/utenti.msg -Iped:/home/me/progetto_labiagi/src/ped/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ped -o /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg
 
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py
+/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for ped"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg --initpy
 
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/__init__.py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py
+/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/__init__.py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python srv __init__.py for ped"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv --initpy
 
 ped_generate_messages_py: CMakeFiles/ped_generate_messages_py
-ped_generate_messages_py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py
+ped_generate_messages_py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py
 ped_generate_messages_py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py
 ped_generate_messages_py: /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/__init__.py
 ped_generate_messages_py: CMakeFiles/ped_generate_messages_py.dir/build.make

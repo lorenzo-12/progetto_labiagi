@@ -6,6 +6,7 @@ CMakeFiles/ped_server.dir/src/ped_server.cpp.o: /home/me/progetto_labiagi/devel/
 CMakeFiles/ped_server.dir/src/ped_server.cpp.o: /home/me/progetto_labiagi/devel/.private/ped/include/ped/set_user.h
 CMakeFiles/ped_server.dir/src/ped_server.cpp.o: /home/me/progetto_labiagi/devel/.private/ped/include/ped/set_userRequest.h
 CMakeFiles/ped_server.dir/src/ped_server.cpp.o: /home/me/progetto_labiagi/devel/.private/ped/include/ped/set_userResponse.h
+CMakeFiles/ped_server.dir/src/ped_server.cpp.o: /home/me/progetto_labiagi/devel/.private/ped/include/ped/utenti.h
 CMakeFiles/ped_server.dir/src/ped_server.cpp.o: /home/me/progetto_labiagi/src/ped/src/ped_server.cpp
 CMakeFiles/ped_server.dir/src/ped_server.cpp.o: /home/me/progetto_labiagi/src/ped/src/utils.h
 CMakeFiles/ped_server.dir/src/ped_server.cpp.o: /opt/ros/melodic/include/geometry_msgs/Point.h

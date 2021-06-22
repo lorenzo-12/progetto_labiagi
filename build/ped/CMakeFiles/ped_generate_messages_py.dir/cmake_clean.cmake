@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ped_generate_messages_py"
-  "/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py"
+  "/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py"
   "/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py"
   "/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/__init__.py"
 )

@@ -1,8 +1,8 @@
 
 "use strict";
 
-let User = require('./User.js');
+let utenti = require('./utenti.js');
 
 module.exports = {
-  User: User,
+  utenti: utenti,
 };

@@ -53,21 +53,21 @@ CMAKE_BINARY_DIR = /home/me/progetto_labiagi/build/ped
 # Include the progress variables for this target.
 include CMakeFiles/ped_generate_messages_eus.dir/progress.make
 
-CMakeFiles/ped_generate_messages_eus: /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/User.l
+CMakeFiles/ped_generate_messages_eus: /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/utenti.l
 CMakeFiles/ped_generate_messages_eus: /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/manifest.l
 
 
-/home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/User.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-/home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/User.l: /home/me/progetto_labiagi/src/ped/msg/User.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from ped/User.msg"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/me/progetto_labiagi/src/ped/msg/User.msg -Iped:/home/me/progetto_labiagi/src/ped/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ped -o /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg
+/home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/utenti.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/utenti.l: /home/me/progetto_labiagi/src/ped/msg/utenti.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from ped/utenti.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/me/progetto_labiagi/src/ped/msg/utenti.msg -Iped:/home/me/progetto_labiagi/src/ped/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ped -o /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg
 
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for ped"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped ped std_msgs
 
 ped_generate_messages_eus: CMakeFiles/ped_generate_messages_eus
-ped_generate_messages_eus: /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/User.l
+ped_generate_messages_eus: /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/utenti.l
 ped_generate_messages_eus: /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/manifest.l
 ped_generate_messages_eus: CMakeFiles/ped_generate_messages_eus.dir/build.make
 

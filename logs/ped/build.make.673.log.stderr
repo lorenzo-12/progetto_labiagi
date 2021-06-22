@@ -1,0 +1,18 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:83:29:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kutente::utente(std::__cxx11::string&, float&, float&, int)[m[K’
+    utente tmp=utente(s,x,y,0[01;31m[K)[m[K;
+                             [01;31m[K^[m[K
+In file included from [01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:1:0[m[K:
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:41:9:[m[K [01;36m[Knote: [m[Kcandidate: utente::utente(std::__cxx11::string, float, float)
+         [01;36m[Kutente[m[K(string s,float a, float b){name=s;x=a;y=b;n=0;};
+         [01;36m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:41:9:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 4 provided
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:35:7:[m[K [01;36m[Knote: [m[Kcandidate: utente::utente(const utente&)
+ class [01;36m[Kutente[m[K{
+       [01;36m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:35:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:35:7:[m[K [01;36m[Knote: [m[Kcandidate: utente::utente(utente&&)
+[01m[K/home/me/progetto_labiagi/src/ped/src/utils.h:35:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2

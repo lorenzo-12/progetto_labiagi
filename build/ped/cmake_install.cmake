@@ -129,7 +129,7 @@ file(INSTALL DESTINATION "/home/me/progetto_labiagi/install" TYPE FILE FILES "/h
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ped/msg" TYPE FILE FILES "/home/me/progetto_labiagi/src/ped/msg/User.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ped/msg" TYPE FILE FILES "/home/me/progetto_labiagi/src/ped/msg/utenti.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

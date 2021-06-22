@@ -1,226 +1,225 @@
 #include "utils.h"
 #include "ros/ros.h"
 #include "geometry_msgs/PoseStamped.h"
+#include "ped/utenti.h"
 #include "/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h"
 #include <bits/stdc++.h>
 #include <boost/algorithm/string.hpp>
+#include <list>
+#include <sstream>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
 
 using namespace std;
 geometry_msgs::PoseStamped goal;
 string s;
-std_msgs::String m;
+ped::utenti m;
 ros::Publisher talk;
 ros::Subscriber listener;
-bool p=false;
-bool d=false;
-bool loop=false;
-bool aspetta=false;
-bool ok=false;
-string username;
-float pos_x;
-float pos_y;
-int k=0;
-vector<string> result;
 ros::Publisher pub_goal;
 ros::Subscriber pub_status;
-vector<float> v = {1,2,3,4};
-float dist_max=0;
-int completamento=0;
-string password="";
-int psw_count=0;
+int prima_volta=0;
+list<utente> l;
+string opzioni="";
+stringstream ss;
+bool movimento=false;
+bool libero=true;
+bool aspetta=false;
+bool inizia=false;
+bool ritirato=false;
+float distanza=0;
 
 
-
-void CB(const std_msgs::String::ConstPtr& msg){
-	//cout << "ho sentito: " << msg->data.c_str() << endl << flush;
-	//cout << "p: " << p << "   d: " << d << endl << flush;
-	
-	//se la condizione è vera vuol dire che si è ricevuti un messaggio "pcik" e quindi ora il messaggio conterrà i dati per 
-	//far muovere il robot
-	if(p){
-		s=msg->data;
-		
-		//funzione che divide una stringa ogni volta che trova una determinata occorrenza di caratteri (nel nostro caso " ")
-		//e li salva all'interno di un array dato in input
-		boost::split(result, s, boost::is_any_of(" "));
-		username=result[0]; pos_x=stof(result[1]); pos_y=stof(result[2]);
-		
-		//si impostano i campi del messaggio che verrà inviato sul topic /move_base_simple/goal che è il topic
-		//dove si inviano i messaggi per far muover il robot
-		cout << "username: " << username << "   x: " << pos_x << "   y: " << pos_y << endl << flush;
-		goal.header.frame_id="map";
-		goal.header.stamp = ros::Time::now();
-		goal.pose.position.x=pos_x;
-		goal.pose.position.y=pos_y;
-
-		pub_goal.publish(goal);
-		ok=true;
-		
-		//aspetto finchè il robot non è arrivato a destinazione
-		while(ros::ok()){
-			if(aspetta) break;
-			ros::spinOnce();
+void CB(const ped::utenti::ConstPtr& msg){
+	cout << "name: "<< msg->name << "  option: " << msg->option << "   pick: " << msg->pick << "   delivery: " << msg->delivery << endl;
+	if(msg->option=="IN"){
+		for(auto& k : l){
+			if(k.name==msg->name) {
+				k.n++;
+				cout << k.name << " " << k.n << endl;
+			}
 		}
-		
-		//cout << red;
-		//cout << "fine ciclo while" << endl << flush;
-		//cout << fine;
-		
-		//invio il messaggio "pick" per far sapere al client che il robot ha preso il pacco
-		m.data="pick";
-		talk.publish(m);
-		ros::spinOnce();
-		
-		aspetta=false;
-		ok=false;
-		p=false;
-		return;
 	}
-	if(d){
-		s=msg->data;
-		
-		//come sopra
-		boost::split(result, s, boost::is_any_of(" "));
-		username=result[0]; pos_x=stof(result[1]); pos_y=stof(result[2]);
-		
-		//come sopra
-		cout << "username: " << username << "   x: " << pos_x << "   y: " << pos_y << endl << flush;
-		goal.header.frame_id="map";
-		goal.header.stamp = ros::Time::now();
-		goal.pose.position.x=pos_x;
-		goal.pose.position.y=pos_y;
-		pub_goal.publish(goal);
-		ok=true;
-		
-		//aspetto che il robot sia arrivato a destinazione
-		while(ros::ok()){
-			if(aspetta) break;
-			ros::spinOnce();
+	else if(msg->option=="OUT"){
+		for(auto& k : l){
+			if(k.name==msg->name){
+				k.n--;
+				cout << k.name << " " << k.n << endl;
+			}
 		}
-		//cout << red;
-		//cout << "fine ciclo while" << endl << flush;
-		//cout << fine;
-		
-		//invio al client il messaggio "delivery" per far sapere che il pacco è stato consegnato
-		m.data="delivery";
-		talk.publish(m);
-		ros::spinOnce();
-		
-		aspetta=false;
-		ok=false;
-		d=false;
-		return;
 	}
-	
-	//se il messaggio ricevuto è "psw" allora mando 2 messaggi al client. il primo è "psw" per far capire che nel prossimo
-	//sarà presente la password. e nel secondo si manda la password.
-	if(msg->data=="psw"){
-		
-		m.data="psw";
-		talk.publish(m);
-		ros::spinOnce();
-		
-		m.data=password;
-		talk.publish(m);
-		ros::spinOnce();
+	else if(msg->option=="pacco-ritirato"){
+		cout << "pacco ritirato correttamente" << endl;
+		ritirato=true;
 	}
-	
-	//se il messaggio che si riceve è opzioni allora si reinvia "opzioni" in modo da far capire al client
-	//che si devono stampare le opzini
-	if(msg->data=="opzioni"){
-		m.data="opzioni";
-		talk.publish(m);
-		ros::spinOnce();
-		//cout << "ho mandato: " << m.data.c_str() << endl << flush;
+	else if(msg->pick!="" && msg->delivery!=""){
+		if(libero==false){
+			m.response="occupato";
+			m.option="";m.name=msg->name;
+			m.pick="";m.delivery="";
+			talk.publish(m);
+			ros::spinOnce();
+			return;
+		}
+		else{
+			libero=false;
+			bool pick_trovato=false;
+			bool delivery_trovato=false;
+			float pick_x; float delivery_x; float pick_n;
+			float pick_y; float delivery_y; float delivery_n;
+			for(auto& k : l){
+				if(k.name==msg->pick){
+					pick_x=k.x;
+					pick_y=k.y;
+					pick_n=k.n;
+					pick_trovato=true;
+				}
+				else if(k.name==msg->delivery){
+					delivery_trovato=true;
+					delivery_x=k.x;
+					delivery_y=k.y;
+					delivery_n=k.n;
+				}
+			}
+			
+			if(delivery_trovato==false){
+				m.response="delivery-non-trovato";
+				m.name=msg->name;
+				talk.publish(m);
+				ros::spinOnce();
+				libero=true;
+				return;
+			}
+			else if(pick_trovato==false){
+				m.response="pick-non-trovato";
+				m.name=msg->name;
+				talk.publish(m);
+				ros::spinOnce();
+				libero=true;
+				return;
+			}
+			else if(pick_n==0){
+				m.response="nessuno-per-prendere-il-pacco";
+				m.name=msg->name;
+				talk.publish(m);
+				ros::spinOnce();
+				libero=true;
+				return;
+			}
+			else if(delivery_n==0){
+				m.response="nessuno-per-ritirare-il-pacco";
+				m.name=msg->name;
+				talk.publish(m);
+				ros::spinOnce();
+				libero=true;
+				return;
+			}
+			
+			m.name=msg->delivery;
+			m.option="devi-ritirare";
+			talk.publish(m);
+			ros::spinOnce();
+			
+			goal.header.stamp=ros::Time::now();
+			goal.header.frame_id="map";
+			goal.pose.position.x=pick_x;
+			goal.pose.position.y=pick_y;
+			pub_goal.publish(goal);
+			cout << pick_x << " " << pick_y << endl;
+			ros::spinOnce();
+			
+			cout << red;
+			cout << "inizio ad aspettare" << endl;
+			cout << fine;
+			movimento=true;
+			
+			
+			while(ros::ok()){
+				if(aspetta) break;
+				ros::spinOnce();
+			}
+			
+			
+			aspetta=false;
+			movimento=false;
+			
+			cout << red;
+			cout << "finito di aspettare" << endl;
+			cout << fine;
+			
+			
+			goal.header.stamp=ros::Time::now();
+			goal.header.frame_id="map";
+			goal.pose.position.x=delivery_x;
+			goal.pose.position.y=delivery_y;
+			pub_goal.publish(goal);
+			cout << delivery_x << " " << delivery_y << endl;
+			
+			
+			cout << red;
+			cout << "inizio ad aspettare" << endl;
+			cout << fine;
+			movimento=true;
+			
+			while(ros::ok()){
+				if(aspetta) break;
+				ros::spinOnce();
+			}
+			aspetta=false;
+			
+			cout << red;
+			cout << "finito di aspettare" << endl;
+			cout << fine;
+			
+			m.name=msg->delivery;
+			m.option="pacco-arrivato";
+			talk.publish(m);
+			
+			cout << "apetto che l'utente prenda il pacco per un massimo di 20 secondi" << endl;
+			int start =ros::Time::now().toSec();
+			int end;
+			
+			while(ros::ok()){
+				if(ritirato) break;
+				end=ros::Time::now().toSec();
+				if(end>start+20) break;
+				ros::spinOnce();
+			}
+			
+			m.name=msg->name;
+			m.pick="";m.delivery="";m.option="";
+			m.response="finito";
+			talk.publish(m);
+			ros::spinOnce();
+			
+			cout << blue;
+			cout << "PACCO SPEDITO, PRONTO PER UN PROSSIMO INCARICO" << endl;
+			cout << fine;
+			
+			movimento=false;
+			libero=true;
+			
+		}
 	}
-	
-	//se il messaggio è "pick" allora vuol dire che mi arriverà un ulteriore messaggio contentente i dati per 
-	//far muover il robot. quindi metto la variabile p=true in modo che alla prossima chiamata callBack si entri nell'if 
-	//che si trova sopra
-	else if(msg->data=="pick"){
-		//cout << "pick" << endl << flush;
-		p=true;
-	}
-	
-	//stessa logica del "pick" ma qui si imposta la variabile d=true
-	else if(msg->data=="delivery"){
-		//cout << "delivery" << endl << flush;
-		d=true;
-	}
-	
-	//se ricevo un messaggio che non consco lo rimando al client
-	else{
-		m.data=msg->data;
-		talk.publish(m);
-		ros::spinOnce();
-		//cout << "ho mandato: " << m.data.c_str() << endl << flush; 
-	}
+	return;
 }
 
 void stato_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& status){
-	k++;
-	if(ok){
-		
-		//imposto la distanza massima in modo da poter dare una stima della percentuale del cammino percorso
-		if(status->distance_to_global_goal>dist_max){
-			dist_max=status->distance_to_global_goal;
+	//cout << movimento << "  " << status->distance_to_global_goal << endl;
+	if(movimento){
+		if(status->distance_to_global_goal>distanza){
+			movimento=false;
+			inizia=true;
 		}
-		
-		//mi calcolo a che percentuale del cammino totale si trova il robot
-		completamento=(dist_max-status->distance_to_global_goal)*100/dist_max;
-		if(completamento<0) completamento=0;
-		//stampo la distanza a cui si trova dal goal e la percuntale del completamento del cammino
-		cout << "\rstatus distance: ";
-		cout << lightblue;
-		cout << fixed << setprecision(4) << status->distance_to_global_goal << flush;
-		cout << fine;
-		cout << " completamento: " << flush;
-		
-		//cambio il colore alla percentuale e al [###]
-		if(completamento<33) cout << red;
-		else if(completamento<70) cout << yellow;
-		else if(completamento>=70) cout << green;
-		cout << fixed << setprecision(4) << completamento << "% " << flush;
-		cout << fine;
-		for(int aux=0; aux<30; aux++){
-			if(completamento<33) cout << red;
-			else if(completamento<70) cout << yellow;
-			else if(completamento>=70) cout << green;
-			if(aux==0) cout << "  [" << flush;
-			if(aux<0.3*completamento) cout << "#" << flush;
-			else cout << "." << flush;
-			cout << fine;
-		}
-		cout << "]  " << flush;
-		v.insert(v.begin()+k%4,status->distance_to_global_goal);
+		else distanza=status->distance_to_global_goal;
 	}
-	
-	//siccome il robot non si ferma esattamente sopra il punto (cioè a distanza 0) quello che faccio è salvarmi 
-	//ogni volta la distanza a cui si trova il robot all'interno di un array di 4 elementi. se tutti e 4 gli elementi
-	//sono uguali vuol dire che sono arrivato a destinazine
-	
-	//dato che la distanza del robot non va mai a zero preciso non si può nemmeno scrivere una funzione per capire se il 
-	//robot si è bloccato a metà strada poichè potrebbe benissimo incastrarsi a 0.5 dal goal (ovviamente se il robot si ferma
-	//a 10 dal goal si è ovviamente incastrato, ma dai vari test fatti la distanza a cui si ferma il robot varia sempre)
-	if(v.at(0)==v.at(1) and v.at(1)==v.at(2) and v.at(2)==v.at(3) and ok){
-		cout << "\rstatus distance: ";
-		cout << lightblue;
-		cout << fixed << setprecision(4) << status->distance_to_global_goal << flush;
-		cout << fine;
-		cout << " completamento: " << flush;
-		cout << green;
-		cout << "100%" << flush;
-		cout << fine;
-		cout << green;
-		cout << "   [#############################]  " << flush;
-		cout << fine;
-		cout << endl << flush;
-		
-		//quando il robot è arrivato al goal imposto la variabile aspetta (usata sopra) a true
+	else if(inizia && status->distance_to_global_goal<0.8){
 		aspetta=true;
-		dist_max=0;
-		v = {1,2,3,4};
+		movimento=false;
+		inizia=false;
 	}
+	else distanza=status->distance_to_global_goal;
 	return;
 }
 
@@ -234,14 +233,30 @@ int main(int argc, char** argv){
 	
 	pub_status = n.subscribe("/planner_status", 1000, stato_robot);
 	
-	talk = n.advertise<std_msgs::String>("/ped_stc",1000);
+	talk = n.advertise<ped::utenti>("/ped_stc",1000);
 	listener = n.subscribe("/ped_cts",1000,CB);
 	
-	//condizione per impostare la password. count mi assicura si entri nell'if una sola volta
-	if(psw_count==0){
-		psw_count++;
-		cout << "DIGITARE LA PASSWORD: "; cin >> password;
-		cout << endl << flush;
+	if(prima_volta==0){
+		
+		//ADESSO È IL CLIENT CHE GESTISCE GLI UTENTI
+		string s;
+		float x;
+		float y;
+		ifstream inFile;
+		
+		inFile.open("/home/me/progetto_labiagi/src/ped/src/stanze.txt");
+		if (!inFile) {
+			cout << "Unable to open file" << endl;
+			exit(1); // terminate with error
+		}
+    
+		while (inFile >> s >> x >> y ) {
+			ss << s << " " << x << " " << y << "\n";
+			utente tmp=utente(s,x,y);
+			l.push_back(tmp);
+			cout << tmp.name << " " << tmp.x << " " << tmp.y << " " << tmp.n << endl << flush;
+		}
+		opzioni=ss.str();
 	}
 	
 	ros::spin();

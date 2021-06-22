@@ -6,3 +6,4 @@ from ._msgActionResult import *
 from ._msgFeedback import *
 from ._msgGoal import *
 from ._msgResult import *
+from ._utenti import *

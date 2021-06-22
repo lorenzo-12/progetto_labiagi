@@ -1,0 +1,34 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:22:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kstringstram[m[K’ does not name a type; did you mean ‘[01m[Kstrstr[m[K’?
+ [01;31m[Kstringstram[m[K ss;
+ [01;31m[K^~~~~~~~~~~[m[K
+ [32m[Kstrstr[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kvoid CB(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:26:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kss[m[K’ was not declared in this scope
+  [01;31m[Kss[m[K << msg->data;
+  [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:26:2:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ks[m[K’
+  [01;36m[Kss[m[K << msg->data;
+  [01;36m[K^~[m[K
+  [32m[Ks[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kvoid stato_robot(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:40:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmovimento[m[K’ was not declared in this scope
+  if([01;31m[Kmovimento[m[K && status->distance_to_global_goal<0.5){
+     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:80:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kss[m[K’ was not declared in this scope
+    [01;31m[Kss[m[K << s << " " << x << " " << y << "\n";
+    [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:80:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ks[m[K’
+    [01;36m[Kss[m[K << s << " " << x << " " << y << "\n";
+    [01;36m[K^~[m[K
+    [32m[Ks[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:84:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kss[m[K’ was not declared in this scope
+   opzioni=[01;31m[Kss[m[K.str()
+           [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_server.cpp:84:11:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ks[m[K’
+   opzioni=[01;36m[Kss[m[K.str()
+           [01;36m[K^~[m[K
+           [32m[Ks[m[K
+make[2]: *** [CMakeFiles/ped_server.dir/src/ped_server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_server.dir/all] Error 2
+make: *** [all] Error 2

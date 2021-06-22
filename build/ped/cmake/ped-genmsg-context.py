@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/me/progetto_labiagi/src/ped/msg/User.msg"
+messages_str = "/home/me/progetto_labiagi/src/ped/msg/utenti.msg"
 services_str = ""
 pkg_name = "ped"
 dependencies_str = "std_msgs"

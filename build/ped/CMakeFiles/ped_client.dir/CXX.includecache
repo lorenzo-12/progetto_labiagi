@@ -80,6 +80,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/me/progetto_labiagi/devel/.private/ped/include/ped/utenti.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/me/progetto_labiagi/src/ped/src/ped_client.cpp
 utils.h
 /home/me/progetto_labiagi/src/ped/src/utils.h
@@ -87,7 +103,17 @@ ros/ros.h
 /home/me/progetto_labiagi/src/ped/src/ros/ros.h
 geometry_msgs/PoseStamped.h
 /home/me/progetto_labiagi/src/ped/src/geometry_msgs/PoseStamped.h
+ped/utenti.h
+/home/me/progetto_labiagi/src/ped/src/ped/utenti.h
 /home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h
+-
+sstream
+-
+iostream
+-
+iomanip
+-
+fstream
 -
 
 /home/me/progetto_labiagi/src/ped/src/utils.h

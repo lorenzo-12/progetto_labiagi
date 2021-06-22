@@ -7,6 +7,7 @@ CMakeFiles/ped_client.dir/src/ped_client.cpp.o
  /home/me/progetto_labiagi/devel/.private/ped/include/ped/set_user.h
  /home/me/progetto_labiagi/devel/.private/ped/include/ped/set_userRequest.h
  /home/me/progetto_labiagi/devel/.private/ped/include/ped/set_userResponse.h
+ /home/me/progetto_labiagi/devel/.private/ped/include/ped/utenti.h
  /home/me/progetto_labiagi/src/ped/src/ped_client.cpp
  /home/me/progetto_labiagi/src/ped/src/utils.h
  /opt/ros/melodic/include/geometry_msgs/Point.h

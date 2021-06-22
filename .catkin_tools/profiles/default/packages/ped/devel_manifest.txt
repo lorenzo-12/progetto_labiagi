@@ -1,5 +1,6 @@
 ped
 /home/me/progetto_labiagi/devel/.private/ped/cmake.lock /home/me/progetto_labiagi/devel/./cmake.lock
+/home/me/progetto_labiagi/devel/.private/ped/include/ped/utenti.h /home/me/progetto_labiagi/devel/include/ped/utenti.h
 /home/me/progetto_labiagi/devel/.private/ped/include/ped/set_userResponse.h /home/me/progetto_labiagi/devel/include/ped/set_userResponse.h
 /home/me/progetto_labiagi/devel/.private/ped/include/ped/msgActionFeedback.h /home/me/progetto_labiagi/devel/include/ped/msgActionFeedback.h
 /home/me/progetto_labiagi/devel/.private/ped/include/ped/User.h /home/me/progetto_labiagi/devel/include/ped/User.h
@@ -15,6 +16,7 @@ ped
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/__init__.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/__init__.py
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_msgActionGoal.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/msg/_msgActionGoal.py
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_msgActionFeedback.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/msg/_msgActionFeedback.py
+/home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/msg/_utenti.py
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/msg/_User.py
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_msgAction.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/msg/_msgAction.py
 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/ped/msg/__init__.py
@@ -34,12 +36,14 @@ ped
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/User.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/msg/User.l
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgAction.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/msg/msgAction.l
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgGoal.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/msg/msgGoal.l
+/home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/utenti.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/msg/utenti.l
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgActionGoal.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/msg/msgActionGoal.l
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgActionFeedback.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/msg/msgActionFeedback.l
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgActionResult.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/msg/msgActionResult.l
 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/srv/set_user.l /home/me/progetto_labiagi/devel/share/roseus/ros/ped/srv/set_user.l
 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/_index.js /home/me/progetto_labiagi/devel/share/gennodejs/ros/ped/_index.js
 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgFeedback.js /home/me/progetto_labiagi/devel/share/gennodejs/ros/ped/msg/msgFeedback.js
+/home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/utenti.js /home/me/progetto_labiagi/devel/share/gennodejs/ros/ped/msg/utenti.js
 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgActionResult.js /home/me/progetto_labiagi/devel/share/gennodejs/ros/ped/msg/msgActionResult.js
 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgActionFeedback.js /home/me/progetto_labiagi/devel/share/gennodejs/ros/ped/msg/msgActionFeedback.js
 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgGoal.js /home/me/progetto_labiagi/devel/share/gennodejs/ros/ped/msg/msgGoal.js
@@ -62,6 +66,7 @@ ped
 /home/me/progetto_labiagi/devel/.private/ped/share/ped/cmake/ped-msg-extras.cmake /home/me/progetto_labiagi/devel/share/ped/cmake/ped-msg-extras.cmake
 /home/me/progetto_labiagi/devel/.private/ped/share/ped/cmake/pedConfig-version.cmake /home/me/progetto_labiagi/devel/share/ped/cmake/pedConfig-version.cmake
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/_package.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/_package.lisp
+/home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/_package_utenti.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/_package_utenti.lisp
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/msgFeedback.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/msgFeedback.lisp
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/_package_User.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/_package_User.lisp
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/msgResult.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/msgResult.lisp
@@ -75,6 +80,7 @@ ped
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/_package_msgFeedback.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/_package_msgFeedback.lisp
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/_package_msgActionResult.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/_package_msgActionResult.lisp
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/_package_msgGoal.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/_package_msgGoal.lisp
+/home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/utenti.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/utenti.lisp
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/ped-msg.asd /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/ped-msg.asd
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/_package_msgActionGoal.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/_package_msgActionGoal.lisp
 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/msgGoal.lisp /home/me/progetto_labiagi/devel/share/common-lisp/ros/ped/msg/msgGoal.lisp

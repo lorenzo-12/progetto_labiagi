@@ -1,0 +1,12 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kvoid CB(const ConstPtr&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:82:75:[m[K [01;31m[Kerror: [m[K‘[01m[Kritiro[m[K’ was not declared in this scope
+    cout << "IL PACCO È ARRIVATO DIGITA QUALCOSA PER RITIRARLO: "; cin << [01;31m[Kritiro[m[K;
+                                                                           [01;31m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:82:75:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Krmdir[m[K’
+    cout << "IL PACCO È ARRIVATO DIGITA QUALCOSA PER RITIRARLO: "; cin << [01;36m[Kritiro[m[K;
+                                                                           [01;36m[K^~~~~~[m[K
+                                                                           [32m[Krmdir[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

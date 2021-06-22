@@ -1,0 +1,14 @@
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:148:13:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[Kstd::ifstream inFile[m[K’ has incomplete type and cannot be defined
+    ifstream [01;31m[KinFile[m[K;
+             [01;31m[K^~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:158:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktmp[m[K’ was not declared in this scope
+     cout << [01;31m[Ktmp[m[K.name << " " << tmp.x << " " << tmp.y << endl << flush;
+             [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/ped/src/ped_client.cpp:158:13:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktm[m[K’
+     cout << [01;36m[Ktmp[m[K.name << " " << tmp.x << " " << tmp.y << endl << flush;
+             [01;36m[K^~~[m[K
+             [32m[Ktm[m[K
+make[2]: *** [CMakeFiles/ped_client.dir/src/ped_client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ped_client.dir/all] Error 2
+make: *** [all] Error 2

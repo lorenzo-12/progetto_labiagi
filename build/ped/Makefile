@@ -168,19 +168,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ped_client
-
-# Build rule for target.
-ped_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ped_client
-.PHONY : ped_client
-
-# fast build rule for target.
-ped_client/fast:
-	$(MAKE) -f CMakeFiles/ped_client.dir/build.make CMakeFiles/ped_client.dir/build
-.PHONY : ped_client/fast
-
-#=============================================================================
 # Target rules for targets named ped_server
 
 # Build rule for target.
@@ -545,6 +532,19 @@ ped_gencpp/fast:
 .PHONY : ped_gencpp/fast
 
 #=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_py
 
 # Build rule for target.
@@ -623,30 +623,30 @@ ped_gennodejs/fast:
 .PHONY : ped_gennodejs/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+# Target rules for targets named ped_client
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
+ped_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ped_client
+.PHONY : ped_client
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+ped_client/fast:
+	$(MAKE) -f CMakeFiles/ped_client.dir/build.make CMakeFiles/ped_client.dir/build
+.PHONY : ped_client/fast
 
 #=============================================================================
-# Target rules for targets named _ped_generate_messages_check_deps_User
+# Target rules for targets named _ped_generate_messages_check_deps_utenti
 
 # Build rule for target.
-_ped_generate_messages_check_deps_User: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _ped_generate_messages_check_deps_User
-.PHONY : _ped_generate_messages_check_deps_User
+_ped_generate_messages_check_deps_utenti: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _ped_generate_messages_check_deps_utenti
+.PHONY : _ped_generate_messages_check_deps_utenti
 
 # fast build rule for target.
-_ped_generate_messages_check_deps_User/fast:
-	$(MAKE) -f CMakeFiles/_ped_generate_messages_check_deps_User.dir/build.make CMakeFiles/_ped_generate_messages_check_deps_User.dir/build
-.PHONY : _ped_generate_messages_check_deps_User/fast
+_ped_generate_messages_check_deps_utenti/fast:
+	$(MAKE) -f CMakeFiles/_ped_generate_messages_check_deps_utenti.dir/build.make CMakeFiles/_ped_generate_messages_check_deps_utenti.dir/build
+.PHONY : _ped_generate_messages_check_deps_utenti/fast
 
 #=============================================================================
 # Target rules for targets named run_tests
@@ -804,7 +804,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... ped_client"
 	@echo "... ped_server"
 	@echo "... ped_generate_messages_py"
 	@echo "... std_msgs_generate_messages_py"
@@ -834,6 +833,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... ped_gencpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... ped_geneus"
 	@echo "... ped_genlisp"
@@ -841,8 +841,8 @@ help:
 	@echo "... install/local"
 	@echo "... doxygen"
 	@echo "... ped_gennodejs"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... _ped_generate_messages_check_deps_User"
+	@echo "... ped_client"
+	@echo "... _ped_generate_messages_check_deps_utenti"
 	@echo "... run_tests"
 	@echo "... ped_generate_messages_cpp"
 	@echo "... ped_generate_messages_eus"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ped_generate_messages_cpp"
-  "/home/me/progetto_labiagi/devel/.private/ped/include/ped/User.h"
+  "/home/me/progetto_labiagi/devel/.private/ped/include/ped/utenti.h"
 )
 
 # Per-language clean rules from dependency scanning.

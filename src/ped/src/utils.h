@@ -37,7 +37,8 @@ class utente{
         string name;
         float x;
         float y;
-        utente(string s,float a, float b){name=s;x=a;y=b;};
+        int n;
+        utente(string s,float a, float b){name=s;x=a;y=b;n=0;};
         bool operator==(const utente& a){
             if(a.name==this->name) return true;
             return false;

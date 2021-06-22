@@ -1,0 +1,4 @@
+cinema 40 12
+teatro 30 12
+camera 20 12
+balcone 10 12

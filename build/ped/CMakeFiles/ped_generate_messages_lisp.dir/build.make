@@ -53,16 +53,16 @@ CMAKE_BINARY_DIR = /home/me/progetto_labiagi/build/ped
 # Include the progress variables for this target.
 include CMakeFiles/ped_generate_messages_lisp.dir/progress.make
 
-CMakeFiles/ped_generate_messages_lisp: /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/User.lisp
+CMakeFiles/ped_generate_messages_lisp: /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/utenti.lisp
 
 
-/home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/User.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
-/home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/User.lisp: /home/me/progetto_labiagi/src/ped/msg/User.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from ped/User.msg"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/me/progetto_labiagi/src/ped/msg/User.msg -Iped:/home/me/progetto_labiagi/src/ped/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ped -o /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg
+/home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/utenti.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/utenti.lisp: /home/me/progetto_labiagi/src/ped/msg/utenti.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/ped/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from ped/utenti.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/me/progetto_labiagi/src/ped/msg/utenti.msg -Iped:/home/me/progetto_labiagi/src/ped/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ped -o /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg
 
 ped_generate_messages_lisp: CMakeFiles/ped_generate_messages_lisp
-ped_generate_messages_lisp: /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/User.lisp
+ped_generate_messages_lisp: /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/utenti.lisp
 ped_generate_messages_lisp: CMakeFiles/ped_generate_messages_lisp.dir/build.make
 
 .PHONY : ped_generate_messages_lisp

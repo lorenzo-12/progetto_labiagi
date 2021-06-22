@@ -8,6 +8,7 @@ f8c554c3357006abcfeffe8165d82e01 /home/me/progetto_labiagi/devel/.private/ped/in
 d3574949cc855399d16c04dd71f4cceb /home/me/progetto_labiagi/devel/.private/ped/include/ped/msgGoal.h
 7d14b1f7a2f9fa3b16cc9a43d0fdf856 /home/me/progetto_labiagi/devel/.private/ped/include/ped/msgResult.h
 112fb2404d82acae289c6c283e6a10e7 /home/me/progetto_labiagi/devel/.private/ped/include/ped/set_user.h
+0819a9ec8da922ac05e42eef154545db /home/me/progetto_labiagi/devel/.private/ped/include/ped/utenti.h
 cd472de1f27387ac5237be06b73867d9 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_User.py
 9854ba1d458b9dfe5eec1381a27d91c1 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/__init__.py
 4db3207fa638b70d70f9f3b8aa67065a /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_msgAction.py
@@ -17,6 +18,7 @@ c219a0dcc2ac0bda84e2f29af87f5d3b /home/me/progetto_labiagi/devel/.private/ped/li
 514ef336cea915170ba4bb811a2d06dd /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_msgFeedback.py
 d29d1ce930e25d053cf3fcf9211daebd /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_msgGoal.py
 798e83cad0e21a1c00ae87e2456c4791 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_msgResult.py
+77d66828d0b7b1a47d6d7dd9a14dfe7d /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/msg/_utenti.py
 b9240a6484f05ac824652cbb890e11e4 /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/__init__.py
 766cdf234b974da225de77c5255a120b /home/me/progetto_labiagi/devel/.private/ped/lib/python2.7/dist-packages/ped/srv/_set_user.py
 6ee13906118c064d2a860b643bed651f /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/User.lisp
@@ -27,6 +29,7 @@ afb8f1885c4c2a3b49d1ec9d26d92e94 /home/me/progetto_labiagi/devel/.private/ped/sh
 8b351dd17e9f8451a8228044d0d0c665 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/msgFeedback.lisp
 8558a2cf335801a2edc2baf6d88b01a3 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/msgGoal.lisp
 ddeca44b6d1dd50c9508a8a2a4ac7bf0 /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/msgResult.lisp
+888b4a377350d957a354472e4dcf814d /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/msg/utenti.lisp
 4ffce5894d0479ba00ad679bf249f4ea /home/me/progetto_labiagi/devel/.private/ped/share/common-lisp/ros/ped/srv/set_user.lisp
 afaef8f5156c607c070a117e4edd7226 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/User.js
 4e0772d384e986e2e3450c5e77bd9bda /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgAction.js
@@ -36,6 +39,7 @@ c2177b59b3abb7b898f725f45242039f /home/me/progetto_labiagi/devel/.private/ped/sh
 daac200f567e8e9ceaa5dba6c0e1ff55 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgFeedback.js
 5ad9b4bf3b711891035a7264ded48c09 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgGoal.js
 b505a5c306ddab9fbd7bc2e5f57e23bc /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/msgResult.js
+1b3ca49bf99777fc06a3bca17dada81c /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/msg/utenti.js
 87e08572e4f97aeedf7b999143aea4f0 /home/me/progetto_labiagi/devel/.private/ped/share/gennodejs/ros/ped/srv/set_user.js
 47d48e6102f3abb9a373aeae9d481567 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/manifest.l
 a23a051c89da5a4c783651c1d799cf95 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/User.l
@@ -46,8 +50,9 @@ f04a77fefe9c169938d85c7f58b568fc /home/me/progetto_labiagi/devel/.private/ped/sh
 b3025f93fc8dc581736eda9f545b3265 /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgFeedback.l
 bd9bf6ddc77ed4596a992c8b299f199a /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgGoal.l
 51efa800e667de9cf75d4428035bd20c /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/msgResult.l
+e7084bd8d7a785ac6790cbcd8edc22ab /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/msg/utenti.l
 265251e818d5bad8f745faa9afee60eb /home/me/progetto_labiagi/devel/.private/ped/share/roseus/ros/ped/srv/set_user.l
-e6547a8fdeb341d52ff5607638dd4e4d CMakeFiles/_ped_generate_messages_check_deps_User
+10ca92de4c791d19f963b9e5eb1b0c6f CMakeFiles/_ped_generate_messages_check_deps_utenti
 bb814ca256866f8455718d1d57f93b8d CMakeFiles/clean_test_results
 c4921879f968329607580baa0ad816b6 CMakeFiles/ped_generate_messages_cpp
 c4921879f968329607580baa0ad816b6 CMakeFiles/ped_generate_messages_eus

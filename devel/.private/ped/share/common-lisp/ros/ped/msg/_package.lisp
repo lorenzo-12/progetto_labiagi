@@ -1,7 +1,7 @@
 (cl:defpackage ped-msg
   (:use )
   (:export
-   "<USER>"
-   "USER"
+   "<UTENTI>"
+   "UTENTI"
   ))
 
