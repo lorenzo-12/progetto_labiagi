@@ -59,6 +59,7 @@ void CB(const ped::utenti::ConstPtr& msg){
 			m.option="";m.name=msg->name;
 			m.pick="";m.delivery="";
 			talk.publish(m);
+			m.name=""; m.option="";m.pick="";m.delivery="";m.response="";
 			ros::spinOnce();
 			return;
 		}
@@ -88,6 +89,7 @@ void CB(const ped::utenti::ConstPtr& msg){
 				m.name=msg->name;
 				talk.publish(m);
 				ros::spinOnce();
+				m.name=""; m.option="";m.pick="";m.delivery="";m.response="";
 				libero=true;
 				return;
 			}
@@ -96,22 +98,27 @@ void CB(const ped::utenti::ConstPtr& msg){
 				m.name=msg->name;
 				talk.publish(m);
 				ros::spinOnce();
+				m.name=""; m.option="";m.pick="";m.delivery="";m.response="";
 				libero=true;
 				return;
 			}
 			else if(pick_n==0){
 				m.response="nessuno-per-prendere-il-pacco";
-				m.name=msg->name;
+				m.name=msg->pick;
 				talk.publish(m);
 				ros::spinOnce();
+				m.name=""; m.option="";m.pick="";m.delivery="";m.response="";
 				libero=true;
+				cout << m.name << endl;
 				return;
 			}
 			else if(delivery_n==0){
 				m.response="nessuno-per-ritirare-il-pacco";
-				m.name=msg->name;
+				m.name=msg->pick;
 				talk.publish(m);
 				ros::spinOnce();
+				m.name=""; m.option="";m.pick="";m.delivery="";m.response="";
+				cout << m.name << endl;
 				libero=true;
 				return;
 			}
@@ -120,6 +127,7 @@ void CB(const ped::utenti::ConstPtr& msg){
 			m.option="devi-ritirare";
 			talk.publish(m);
 			ros::spinOnce();
+			m.name=""; m.option="";m.pick="";m.delivery="";m.response="";
 			
 			goal.header.stamp=ros::Time::now();
 			goal.header.frame_id="map";
@@ -175,6 +183,7 @@ void CB(const ped::utenti::ConstPtr& msg){
 			m.name=msg->delivery;
 			m.option="pacco-arrivato";
 			talk.publish(m);
+			m.name=""; m.option="";m.pick="";m.delivery="";m.response="";
 			
 			cout << "apetto che l'utente prenda il pacco per un massimo di 20 secondi" << endl;
 			int start =ros::Time::now().toSec();
@@ -192,6 +201,7 @@ void CB(const ped::utenti::ConstPtr& msg){
 			m.response="finito";
 			talk.publish(m);
 			ros::spinOnce();
+			m.name=""; m.option="";m.pick="";m.delivery="";m.response="";
 			
 			cout << blue;
 			cout << "PACCO SPEDITO, PRONTO PER UN PROSSIMO INCARICO" << endl;

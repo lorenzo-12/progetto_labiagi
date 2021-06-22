@@ -40,7 +40,7 @@ void stampa_opzioni(){
 				
 void CB(const ped::utenti::ConstPtr& msg){
 	if(msg->name==stanza){
-		cout << msg->response << endl;
+		//cout << msg->response << endl;
 		if(msg->response=="finito"){
 			aspetta=true;
 			cout << red;
@@ -68,13 +68,13 @@ void CB(const ped::utenti::ConstPtr& msg){
 		else if(msg->response=="nessuno-per-prendere-il-pacco"){
 			aspetta=true;
 			cout << red;
-			cout << "nella stanza non c'è nessuno per ritirare il pacco'" << endl;
+			cout << "nella stanza non c'è nessuno per prendere il pacco" << msg->name.c_str() << endl;
 			cout << fine;
 		}
 		else if(msg->response=="nessuno-per-ritirare-il-pacco"){
 			aspetta=true;
 			cout << red;
-			cout << "nella stanza non c'è nessuno per ritirare il pacco'" << endl;
+			cout << "nella stanza non c'è nessuno per ritirare il pacco" << msg->name.c_str() << endl;
 			cout << fine;
 		}
 		else if(msg->option=="devi-ritirare"){
@@ -139,6 +139,9 @@ int main(int argc, char** argv){
 		}
 		stampa_opzioni();
 		cout << "scegli un'opzione: "; cin >> opzione;
+		if(opzione=="clear"){
+			system("clear");
+		}
 		if(opzione=="0") {
 			msg.name=stanza;
 			msg.option="OUT";
