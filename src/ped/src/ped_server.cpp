@@ -52,6 +52,7 @@ void CB(const std_msgs::String::ConstPtr& msg){
 		goal.header.stamp = ros::Time::now();
 		goal.pose.position.x=pos_x;
 		goal.pose.position.y=pos_y;
+
 		pub_goal.publish(goal);
 		ok=true;
 		

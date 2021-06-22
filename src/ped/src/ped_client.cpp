@@ -24,11 +24,6 @@ bool psw_wait=false;
 
 void stampa_opzioni(){
 	
-	cout << red;
-	cout << "aaaaaaaaaaaaaaaaaa" << endl << flush;
-	cout << fine;
-	
-	
 	cout << "COMANDI DISPONIBILI (0 PER TERMINARE):" << endl;
 	cout << red;
 	cout << "  1- INSERIMENTO/MODIFICA UTENTE NEL DATABASE" << endl;
@@ -43,7 +38,7 @@ void stampa_opzioni(){
 	cout << "  4- VISUALIZZAZIONE LISTA UTENTI" << endl << flush;
 	cout << fine;
 }
-
+				
 void CB(const std_msgs::String::ConstPtr& msg){
 	//cout << "ho sentito: " << msg->data.c_str() << endl << flush;
 	r=msg->data;
@@ -64,10 +59,11 @@ int main(int argc, char** argv){
 	ros::init(argc, argv, "ped_test");
 	ros::NodeHandle n;
 	
+	
 	ros::Publisher talk = n.advertise<std_msgs::String>("/ped_cts",1000);
 	ros::Subscriber listener = n.subscribe("/ped_stc",1000,CB);
 	
-	
+
 	/*	NON SO PER QUALE MOTIVO MA NON INVIA QUESTI MESSAGGI, HO PROVATO ANCHE A METTERE ROS::SPINONCE() PRIMA MA NULLA.
 		HO PROVATO ANCHE A FARE 10 PUBLISH DI FILA MA NULLA. PERÒ SE METTO UNA SLEEP E POI FACCIO UN PUBLISH ALLORA FUNZIONA
 		NON SO PERCHÈ. QUINDI SONO COSTRETTO A METTERE IL WHILE
