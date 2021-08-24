@@ -1,4 +1,4 @@
-cinema 40 12
-teatro 30 12
-camera 20 12
-balcone 10 12
+Laboratorio 40 12
+Fisica 30 12
+Matematica 20 12
+Informatica 10 12
