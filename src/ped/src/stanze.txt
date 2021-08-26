@@ -1,4 +1,4 @@
-Laboratorio 40 12
-Fisica 30 12
-Matematica 20 12
+Laboratorio 28 9
+Fisica 32 9
+Matematica 15 10
 Informatica 10 12
