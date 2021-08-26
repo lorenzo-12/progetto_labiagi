@@ -235,7 +235,7 @@ void stato_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& status){
 
 int main(int argc, char** argv){
 	//inizializzo il nodo e creo il nodehandle
-	ros::init(argc, argv, "ped_client");
+	ros::init(argc, argv, "ped_server");
 	ros::NodeHandle n;
 	
 	//publisher necessario per avvisare il robot che deve raggiungere un determinato goal

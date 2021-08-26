@@ -92,7 +92,7 @@ void CB(const ped::utenti::ConstPtr& msg){
 
 int main(int argc, char** argv){
 	
-	ros::init(argc, argv, "ped_test",ros::init_options::AnonymousName);
+	ros::init(argc, argv, "ped_client",ros::init_options::AnonymousName);
 	ros::NodeHandle n;
 	
 	
